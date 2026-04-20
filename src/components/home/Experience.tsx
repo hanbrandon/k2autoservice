@@ -4,44 +4,38 @@ import { useState, useRef } from "react";
 import { motion, useScroll, useMotionValueEvent, useSpring } from "motion/react";
 
 const floors = [
-  { id: "SERVICE", name: "Certified Repair Center" },
-  { id: "SALES", name: "Luxury Vehicle Inventory" },
+  { id: "NEW", name: "New Car Purchase & Lease" },
   { id: "USED", name: "Certified Pre-Owned" },
-  { id: "DMV", name: "Registration & Title Service" },
-  { id: "DETAILING", name: "Professional Detailing" },
-  { id: "FLEET", name: "Corporate Fleet Solutions" }
+  { id: "RENTAL", name: "Short & Long-term Rental" },
+  { id: "DMV", name: "DMV & Registration" },
+  { id: "REPAIR", name: "Professional Repair" }
 ];
 
 const floorData: Record<string, { title: string, subtitle: string, desc: string }> = {
-  "SERVICE": {
-    title: "PRECISION REPAIR",
-    subtitle: "State-of-the-art diagnostic and repair facilities",
-    desc: "Our master technicians use manufacturer-specialized tools to ensure your vehicle performs at its peak. From routine oil changes to complex transmission repairs."
-  },
-  "SALES": {
-    title: "NEW ARRIVALS",
-    subtitle: "Experience the latest in automotive technology",
-    desc: "Browse our premium selection of the newest models. We offer tailored test drive experiences and personalized expert consultations."
+  "NEW": {
+    title: "NEW CAR ACQUISITION",
+    subtitle: "Purchase & Leasing Solutions",
+    desc: "Experience a seamless process for acquiring the latest models. K2 Auto Group provides competitive leasing and purchase options tailored to your professional and personal needs."
   },
   "USED": {
-    title: "CERTIFIED PRE-OWNED",
-    subtitle: "Quality you can trust, value you can't ignore",
-    desc: "Every pre-owned vehicle undergoes a rigorous 150-point inspection. Drive home with confidence knowing your car meets the K2 standard."
+    title: "PREMIUM PRE-OWNED",
+    subtitle: "Certified Quality Inventory",
+    desc: "Every vehicle in our pre-owned collection is meticulously inspected and certified. Drive with confidence knowing your car meets our rigorous standards of excellence."
+  },
+  "RENTAL": {
+    title: "FLEXIBLE RENTAL",
+    subtitle: "Short & Long-term Solutions",
+    desc: "From premium sedans to luxury SUVs, our diverse fleet offers flexible rental options. Whether for a weekend or a month, we provide mobility with zero compromise."
   },
   "DMV": {
-    title: "DMV EXPRESS",
-    subtitle: "Skip the line, save your time",
-    desc: "We are authorized to handle registration, title transfers, and plate replacements directly. Experience hassle-free government services."
+    title: "EXPRESS REGISTRATION",
+    subtitle: "DMV & Title Services",
+    desc: "Save your most valuable asset: time. We handle all DMV-related administrative tasks, including title transfers, renewals, and plate replacements with professional speed."
   },
-  "DETAILING": {
-    title: "ELITE DETAILING",
-    subtitle: "Showroom finish, every single time",
-    desc: "Specialized ceramic coating, interior deep cleaning, and paint correction services that restore your vehicle's original luster."
-  },
-  "FLEET": {
-    title: "FLEET MANAGEMENT",
-    subtitle: "Scalable solutions for your business",
-    desc: "Comprehensive maintenance and acquisition programs for corporate fleets, ensuring your business stays on the move."
+  "REPAIR": {
+    title: "CERTIFIED SERVICE",
+    subtitle: "Expert Vehicle Maintenance",
+    desc: "Our state-of-the-art facility is equipped with specialized diagnostics and managed by master technicians. We restore your vehicle to factory-fresh standards."
   }
 };
 
@@ -72,7 +66,7 @@ const Experience = () => {
   });
 
   return (
-    <section ref={containerRef} id="experience" className="relative h-[450vh] bg-white">
+    <section ref={containerRef} id="experience" className="relative h-[400vh] bg-white">
       <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-10 w-full">
           <motion.div 
@@ -83,13 +77,13 @@ const Experience = () => {
             <h2 className="section-title">THE K2 EXPERIENCE</h2>
           </motion.div>
           
-          <div className="flex flex-col lg:flex-row gap-16">
-            {/* Floor List Sidebar */}
-            <div className="w-full lg:w-1/4 border-y border-black/10 divide-y divide-black/10">
+          <div className="flex flex-col lg:flex-row gap-20">
+            {/* Floor List Sidebar - Horizontal Scroll on Mobile */}
+            <div className="w-full lg:w-1/4 flex lg:flex-col overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-hide border-y border-black/5 divide-x lg:divide-x-0 lg:divide-y divide-black/5 snap-x snap-mandatory">
               {floors.map((f, idx) => (
                 <div
                   key={f.id}
-                  className={`relative w-full flex justify-between items-center py-6 px-6 transition-all duration-500 overflow-hidden ${activeIndex === idx ? "text-white" : "text-black/40 hover:text-black"}`}
+                  className={`relative min-w-[200px] lg:min-w-0 w-full flex justify-between items-center py-5 px-6 transition-all duration-500 overflow-hidden snap-center ${activeIndex === idx ? "text-white" : "text-black/30 hover:text-black"}`}
                 >
                   {/* Background Fill for Active State */}
                   {activeIndex === idx && (
@@ -100,15 +94,15 @@ const Experience = () => {
                     />
                   )}
                   
-                  <span className="relative z-10 text-condensed text-3xl tracking-tighter">{f.id}</span>
-                  <span className="relative z-10 text-[10px] font-black uppercase tracking-tight text-right flex-1 ml-4">{f.name}</span>
+                  <span className="relative z-10 text-condensed text-2xl tracking-tighter">{f.id}</span>
+                  <span className="relative z-10 text-[9px] font-black uppercase tracking-tight text-right flex-1 ml-4">{f.name}</span>
                 </div>
               ))}
             </div>
 
             {/* Experience Content */}
             <div className="w-full lg:w-3/4">
-              <div className="relative h-[600px]">
+              <div className="relative h-[550px] md:h-[600px]">
                 {floors.map((f, idx) => (
                   <motion.div
                     key={f.id}
@@ -138,26 +132,26 @@ const Experience = () => {
                         <motion.h3 
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: activeIndex === idx ? 1 : 0, y: activeIndex === idx ? 0 : 20 }}
-                          className="text-condensed text-6xl mb-8 italic font-black uppercase tracking-tighter"
+                          className="text-condensed text-3xl md:text-4xl mb-8 italic font-black uppercase tracking-tighter"
                         >
                           {floorData[f.id].title}
                         </motion.h3>
-                        <button className="bg-[#ed1c24] px-14 py-4 text-xs font-black uppercase text-white hover:bg-black transition-all tracking-[0.3em]">
-                          Learn More
+                        <button className="bg-[#ed1c24] px-12 py-3.5 text-[9px] font-black uppercase text-white hover:bg-black transition-all tracking-[0.4em]">
+                          Explore Details
                         </button>
                       </div>
-                      <div className="md:w-1/2">
+                      <div className="md:w-1/2 pt-1">
                         <motion.h4 
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: activeIndex === idx ? 1 : 0, y: activeIndex === idx ? 0 : 10 }}
-                          className="font-black text-xl mb-6 italic uppercase text-[#ed1c24] tracking-wider"
+                          className="font-black text-xs mb-4 italic uppercase text-[#ed1c24] tracking-[0.3em]"
                         >
                           {floorData[f.id].subtitle}
                         </motion.h4>
                         <motion.p 
                           initial={{ opacity: 0 }}
                           animate={{ opacity: activeIndex === idx ? 1 : 0 }}
-                          className="text-black/60 leading-relaxed font-medium text-lg"
+                          className="text-black/50 leading-relaxed font-medium text-sm md:text-base max-w-lg"
                         >
                           {floorData[f.id].desc}
                         </motion.p>

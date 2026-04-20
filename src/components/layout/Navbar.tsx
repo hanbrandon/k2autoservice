@@ -9,15 +9,18 @@ import { Menu, X } from "lucide-react";
 interface NavItem {
   name: string;
   type: "page" | "anchor";
+  path?: string;
   target?: string;
 }
 
 const navItems: NavItem[] = [
-  { name: "Home", type: "page" },
-  { name: "Sales", type: "anchor", target: "sales" },
-  { name: "Repair", type: "anchor", target: "repair" },
-  { name: "DMV", type: "anchor", target: "information" },
-  { name: "FAQ", type: "page" },
+  { name: "Home", type: "page", path: "/" },
+  { name: "Repair", type: "page", path: "/repair" },
+  { name: "Sales", type: "page", path: "/sales" },
+  { name: "Rental", type: "page", path: "/rental" },
+  { name: "DMV", type: "page", path: "/dmv" },
+  { name: "FAQ", type: "page", path: "/faq" },
+  { name: "Contact", type: "anchor", target: "contact" },
 ];
 
 const Navbar = () => {
@@ -26,7 +29,12 @@ const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
 
-  const activeTab = pathname === "/" ? "Home" : pathname === "/faq" ? "FAQ" : "";
+  const activeTab = pathname === "/" ? "Home" : 
+                    pathname === "/faq" ? "FAQ" : 
+                    pathname === "/dmv" ? "DMV" : 
+                    pathname === "/repair" ? "Repair" :
+                    pathname === "/sales" ? "Sales" :
+                    pathname === "/rental" ? "Rental" : "";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,8 +46,7 @@ const Navbar = () => {
 
   const handleNavClick = (item: NavItem) => {
     if (item.type === "page") {
-      const targetPath = item.name === "Home" ? "/" : `/${item.name.toLowerCase()}`;
-      router.push(targetPath);
+      router.push(item.path || "/");
       window.scrollTo(0, 0);
     } else {
       if (pathname !== "/") {

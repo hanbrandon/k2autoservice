@@ -21,7 +21,7 @@
 }
 
 @utility section-title {
-  @apply text-condensed text-7xl md:text-8xl text-center mb-16;
+  @apply text-condensed text-4xl md:text-5xl text-center mb-24;
 }
 
 @utility hover-underline {

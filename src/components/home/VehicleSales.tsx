@@ -14,31 +14,32 @@ const VehicleSales = () => {
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
           <div>
-            <h2 className="text-condensed text-7xl font-black italic tracking-tighter mb-4">VEHICLE SALES</h2>
-            <p className="text-white/40 uppercase tracking-[0.3em] font-bold text-xs">Curated Selection / Luxury & Performance</p>
+            <h2 className="text-condensed text-4xl md:text-5xl font-black italic tracking-tighter mb-4 uppercase">Vehicle Sales</h2>
+            <p className="text-white/20 uppercase tracking-[0.4em] font-black text-[9px]">Curated Selection / Luxury & Performance</p>
           </div>
-          <button className="border border-white/20 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-            View Full Inventory
+          <button className="border border-white/10 px-12 py-4 text-[9px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all">
+            View Inventory
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-white/10">
+        <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-0 border-t border-white/10 scrollbar-hide snap-x snap-mandatory">
           {cars.map((car, idx) => (
             <motion.div 
               key={car.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="group relative h-[600px] border-r border-white/10 overflow-hidden"
+              className="group relative min-w-[85vw] md:min-w-0 h-[500px] md:h-[600px] border-r border-white/5 overflow-hidden snap-center"
             >
-              <img src={car.img} className="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000" alt={car.name} referrerPolicy="no-referrer" />
-              <div className="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
-                <span className="text-[#ed1c24] font-black text-xs tracking-widest mb-2 italic uppercase">Available Now</span>
-                <h3 className="text-condensed text-4xl font-black mb-1">{car.name}</h3>
-                <p className="text-white/60 font-medium text-sm">{car.price}</p>
+              <img src={car.img} className="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000" alt={car.name} referrerPolicy="no-referrer" />
+              <div className="absolute inset-0 p-10 md:p-12 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                <span className="text-[#ed1c24] font-black text-[9px] tracking-[0.4em] mb-4 italic uppercase">Available Now</span>
+                <h3 className="text-condensed text-2xl md:text-4xl font-black mb-2 uppercase italic tracking-tight">{car.name}</h3>
+                <p className="text-white/40 font-bold text-[10px] uppercase tracking-widest">{car.price}</p>
               </div>
             </motion.div>
           ))}
+          <div className="min-w-[10vw] md:hidden" />
         </div>
       </div>
     </section>
