@@ -17,7 +17,8 @@
 }
 
 @utility text-condensed {
-  @apply font-header tracking-tight uppercase;
+  @apply font-header uppercase;
+  font-weight: 400;
 }
 
 @utility section-title {
@@ -26,6 +27,16 @@
 
 @utility hover-underline {
   @apply relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all hover:after:w-full;
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  &::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
 }
 
 /* Custom scroll bar */
