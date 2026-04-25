@@ -6,7 +6,7 @@ const RepairServices = () => {
     return (
         <section
             id="repair"
-            className="py-32 px-10 bg-[#0a0a0a] text-white overflow-hidden"
+            className="py-20 md:py-32 px-10 bg-[#0a0a0a] text-white overflow-hidden"
         >
             <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div>
@@ -15,10 +15,10 @@ const RepairServices = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         className="text-[#ed1c24] text-[9px] font-black tracking-[0.5em] mb-8 block uppercase italic"
                     >
-                        Technological Superiority
+                        Expert Auto Service
                     </motion.span>
-                    <h2 className="text-condensed text-4xl md:text-5xl font-black italic tracking-tighter mb-10 leading-[0.9] uppercase">
-                        Certified
+                    <h2 className="text-condensed text-4xl md:text-5xl font-black italic  mb-10 leading-[0.9] uppercase">
+                        Full Service
                         <br />
                         Repair Center
                     </h2>
@@ -47,8 +47,11 @@ const RepairServices = () => {
                             </motion.li>
                         ))}
                     </ul>
-                    <button className="bg-white text-black px-12 py-5 text-[9px] font-black uppercase tracking-[0.4em] hover:bg-[#ed1c24] hover:text-white transition-all shadow-xl">
-                        Book Service Session
+                    <button
+                        onClick={() => (window.location.href = '/repair')}
+                        className="bg-white text-black px-12 py-5 text-[9px] font-black uppercase tracking-[0.4em] hover:bg-[#ed1c24] hover:text-white transition-all shadow-xl cursor-pointer"
+                    >
+                        Schedule Repair
                     </button>
                 </div>
                 <div className="relative aspect-square md:aspect-[4/5] lg:aspect-square">
@@ -63,7 +66,7 @@ const RepairServices = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="absolute -bottom-10 -left-10 bg-white p-10 text-black hidden md:block border border-white/5"
                     >
-                        <p className="text-condensed text-4xl font-black italic tracking-tighter uppercase">
+                        <p className="text-condensed text-4xl font-black italic  uppercase">
                             10,000+
                         </p>
                         <p className="text-[8px] font-black opacity-30 uppercase tracking-[0.4em] mt-3">

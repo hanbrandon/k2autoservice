@@ -18,7 +18,7 @@ const TermsOfUse = () => {
                             Service Agreement
                         </span>
                     </motion.div>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase">
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase">
                         Terms Of
                         <br />
                         Use
@@ -30,7 +30,7 @@ const TermsOfUse = () => {
 
                 <article className="prose prose-slate max-w-none text-black/60 font-medium leading-relaxed tracking-tight space-y-12">
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             1. Agreement to Terms
                         </h2>
                         <p>
@@ -42,7 +42,7 @@ const TermsOfUse = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             2. Description of Services
                         </h2>
                         <p>
@@ -55,7 +55,7 @@ const TermsOfUse = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             3. User Obligations
                         </h2>
                         <p>
@@ -69,7 +69,7 @@ const TermsOfUse = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             4. Payments & Estimates
                         </h2>
                         <p>
@@ -82,7 +82,7 @@ const TermsOfUse = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             5. Limitation of Liability
                         </h2>
                         <p>
@@ -94,7 +94,7 @@ const TermsOfUse = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             6. Governing Law
                         </h2>
                         <p>
@@ -108,7 +108,7 @@ const TermsOfUse = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             7. Contact Information
                         </h2>
                         <p>

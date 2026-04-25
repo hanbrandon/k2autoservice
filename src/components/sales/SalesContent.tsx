@@ -21,22 +21,22 @@ import { useState } from 'react';
 const mainCapabilities = [
     {
         title: 'New Car Leasing',
-        desc: 'We negotiate direct-to-fleet rates and residual value optimizations that are unavailable to the general public, specializing in European and high-performance models.',
+        desc: 'We offer competitive leasing rates and exclusive fleet programs for the latest models, specializing in European and high-performance vehicles.',
         icon: <Car className="text-[#ed1c24]" />,
     },
     {
-        title: 'CPO Inventory',
-        desc: 'Our pre-owned acquisition protocol involves a global search for vehicles with impeccable service histories and low mileage, followed by a factory-level certification.',
+        title: 'Certified Pre-Owned',
+        desc: 'Our hand-picked pre-owned inventory features low-mileage vehicles with clean service histories, all passing our rigorous multi-point inspection.',
         icon: <Verified className="text-[#ed1c24]" />,
     },
     {
-        title: 'Strategic Financing',
-        desc: 'Leveraging our network of boutique and institutional lenders to secure preferential interest rates and flexible terms for complex credit profiles.',
+        title: 'Auto Financing',
+        desc: 'Work with our network of lenders to secure great interest rates and flexible terms that fit your budget and credit needs.',
         icon: <TrendingUp className="text-[#ed1c24]" />,
     },
     {
-        title: 'Expat Concierge',
-        desc: 'Dedicated support for international professionals, including credit building advisory and localized vehicle registration without a domestic credit history.',
+        title: 'International Buyer Program',
+        desc: 'Expert assistance for international professionals and expats, including credit-building advice and vehicle registration support.',
         icon: <Globe className="text-[#ed1c24]" />,
     },
 ];
@@ -115,10 +115,10 @@ const SalesContent = () => {
                     >
                         Advisory & Acquisition
                     </motion.span>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase mb-16">
-                        Market
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase mb-16">
+                        Expert
                         <br />
-                        Advisory
+                        Car Sales
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <p className="text-black/60 text-lg md:text-xl font-medium leading-relaxed tracking-tight">
@@ -159,7 +159,7 @@ const SalesContent = () => {
                                 <div className="w-12 h-12 bg-black flex items-center justify-center">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-condensed text-3xl font-black italic uppercase tracking-tighter">
+                                <h3 className="text-condensed text-3xl font-black italic uppercase ">
                                     {item.title}
                                 </h3>
                             </div>
@@ -172,7 +172,7 @@ const SalesContent = () => {
 
                 {/* Process Section */}
                 <section className="bg-black text-white p-12 md:p-24 overflow-hidden mb-40">
-                    <h2 className="text-condensed text-4xl font-black italic uppercase tracking-tighter mb-20 text-center">
+                    <h2 className="text-condensed text-4xl font-black italic uppercase  mb-20 text-center">
                         Acquisition Lifecycle
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -203,10 +203,10 @@ const SalesContent = () => {
                 {/* CTA Section with Form */}
                 <section className="bg-black text-white p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-5">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase tracking-tighter mb-8 leading-none">
-                            Start Your
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-8 leading-none">
+                            Find Your
                             <br />
-                            Acquisition
+                            Next Car
                         </h2>
                         <p className="text-white/40 mb-12 text-sm font-medium leading-relaxed">
                             Interested in a specific model or strategic leasing?
@@ -240,7 +240,7 @@ const SalesContent = () => {
                                     size={40}
                                     className="text-[#ed1c24] mb-4"
                                 />
-                                <h3 className="text-xl font-bold uppercase tracking-tighter italic mb-2">
+                                <h3 className="text-xl font-bold uppercase  italic mb-2">
                                     Request Filed
                                 </h3>
                                 <p className="text-white/40 text-xs font-bold uppercase tracking-widest">

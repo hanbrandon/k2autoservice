@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-    title: 'K2 Auto Service | Excellence in Motion',
+    title: 'K2 Auto Service | Auto Repair & Car Sales in Garden Grove, CA',
     description:
-        'The premier automotive hub in the US. From certified repairs and DMV assistance to a meticulously curated inventory of new and used vehicles.',
+        "Garden Grove's leading automotive center. K2 Auto Service offers certified auto repair, fast DMV registration, and a premium selection of new and used cars.",
 };
 
 export default function RootLayout({

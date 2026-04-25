@@ -19,23 +19,23 @@ import { useState } from 'react';
 
 const mainServices = [
     {
-        title: 'Structural Restoration',
-        desc: 'Utilizing laser-guided frame alignment systems to restore vehicle structural integrity to exact factory specifications following a collision.',
+        title: 'Collision Repair',
+        desc: 'Utilizing advanced frame alignment systems to restore your vehicle to factory safety standards after an accident.',
         icon: <ShieldCheck className="text-[#ed1c24]" />,
     },
     {
-        title: 'Optical Paint Matching',
-        desc: 'Computerized spectro-photometer analysis ensures 100% color accuracy, matching original factory finishes including complex tri-coat and matte pearls.',
+        title: 'Expert Paint Service',
+        desc: 'Computerized color matching ensures a perfect finish, matching your original factory paint perfectly every time.',
         icon: <PenTool className="text-[#ed1c24]" />,
     },
     {
-        title: 'System Diagnostics',
-        desc: 'Full-spectrum electronic interrogation of Engine Management, ADAS, and Infotainment systems using direct manufacturer interface tools.',
+        title: 'Computer Diagnostics',
+        desc: 'Complete electronic check-up of your engine and vehicle systems using the latest manufacturer diagnostic tools.',
         icon: <Search className="text-[#ed1c24]" />,
     },
     {
-        title: 'Precision Maintenance',
-        desc: 'Strict adherence to manufacturer service intervals using only approved lubricants and OEM filtration systems to preserve warranty and performance.',
+        title: 'Routine Maintenance',
+        desc: 'Keep your warranty valid and your car running smooth with regular oil changes, brake service, and factory tune-ups.',
         icon: <Wrench className="text-[#ed1c24]" />,
     },
 ];
@@ -121,10 +121,10 @@ const RepairContent = () => {
                     >
                         Engineering Standard
                     </motion.span>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase mb-16">
-                        Facility
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase mb-16">
+                        Expert Auto
                         <br />
-                        Specifications
+                        Repair
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <p className="text-black/60 text-lg md:text-xl font-medium leading-relaxed tracking-tight">
@@ -178,7 +178,7 @@ const RepairContent = () => {
                                 <div className="w-12 h-12 bg-black flex items-center justify-center">
                                     {service.icon}
                                 </div>
-                                <h3 className="text-condensed text-3xl font-black italic uppercase tracking-tighter">
+                                <h3 className="text-condensed text-3xl font-black italic uppercase ">
                                     {service.title}
                                 </h3>
                             </div>
@@ -191,7 +191,7 @@ const RepairContent = () => {
 
                 {/* Technical Specification Table */}
                 <div className="bg-black text-white p-12 md:p-20 mb-40">
-                    <h2 className="text-condensed text-4xl font-black italic uppercase tracking-tighter mb-16">
+                    <h2 className="text-condensed text-4xl font-black italic uppercase  mb-16">
                         Service Protocols
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -219,10 +219,10 @@ const RepairContent = () => {
                 {/* CTA Section with Form */}
                 <section className="bg-black text-white p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-5">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase tracking-tighter mb-8 leading-none">
-                            Schedule
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-8 leading-none">
+                            Schedule Your
                             <br />
-                            Technical Service
+                            Repair
                         </h2>
                         <p className="text-white/40 mb-12 text-sm font-medium leading-relaxed">
                             For immediate scheduling or technical consultations,
@@ -256,7 +256,7 @@ const RepairContent = () => {
                                     size={40}
                                     className="text-[#ed1c24] mb-4"
                                 />
-                                <h3 className="text-xl font-bold uppercase tracking-tighter italic mb-2">
+                                <h3 className="text-xl font-bold uppercase  italic mb-2">
                                     Request Logged
                                 </h3>
                                 <p className="text-white/40 text-xs font-bold uppercase tracking-widest">

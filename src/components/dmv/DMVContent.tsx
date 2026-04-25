@@ -28,13 +28,13 @@ const mainAreas = [
         icon: <ClipboardCheck className="text-[#ed1c24]" />,
     },
     {
-        title: 'Out-of-State Onboarding',
-        desc: 'A comprehensive solution for out-of-state vehicle transfers, including coordination of CA smog certification and VIN verification at our site.',
+        title: 'Out-of-State Transfers',
+        desc: 'Moving to California? We handle everything from VIN verification to smog coordination and your new CA plates.',
         icon: <Globe className="text-[#ed1c24]" />,
     },
     {
-        title: 'Lienholder Coordination',
-        desc: 'Managing communication with financial institutions for lien removals, title releases, and lease-end documentation processing.',
+        title: 'Title & Lien Services',
+        desc: 'Managing paperwork with lenders for lien removals, title releases, and lease-end documentation processing.',
         icon: <ShieldCheck className="text-[#ed1c24]" />,
     },
 ];
@@ -109,9 +109,9 @@ const DMVContent = () => {
                     >
                         Administrative & Claims Support
                     </motion.span>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase mb-16">
-                        Bureau &<br />
-                        Claims Guide
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase mb-16">
+                        DMV &<br />
+                        Registration
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <p className="text-black/60 text-lg md:text-xl font-medium leading-relaxed tracking-tight">
@@ -153,7 +153,7 @@ const DMVContent = () => {
                                 {section.icon}
                             </div>
                             <div>
-                                <h3 className="text-condensed text-3xl font-black italic uppercase tracking-tighter mb-4">
+                                <h3 className="text-condensed text-3xl font-black italic uppercase  mb-4">
                                     {section.title}
                                 </h3>
                                 <p className="text-black/40 text-base font-medium leading-relaxed tracking-tight">
@@ -170,7 +170,7 @@ const DMVContent = () => {
                         <AlertTriangle size={200} />
                     </div>
                     <div className="relative z-10">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase tracking-tighter mb-16 italic">
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-16 italic">
                             Collision Claim
                             <br />
                             Management
@@ -200,8 +200,8 @@ const DMVContent = () => {
                 {/* CTA Section with Form */}
                 <section className="bg-black text-white p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-5">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase tracking-tighter mb-8 leading-none">
-                            Administrative
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-8 leading-none">
+                            DMV Service
                             <br />
                             Request
                         </h2>
@@ -237,7 +237,7 @@ const DMVContent = () => {
                                     size={40}
                                     className="text-[#ed1c24] mb-4"
                                 />
-                                <h3 className="text-xl font-bold uppercase tracking-tighter italic mb-2">
+                                <h3 className="text-xl font-bold uppercase  italic mb-2">
                                     Request Processed
                                 </h3>
                                 <p className="text-white/40 text-xs font-bold uppercase tracking-widest">

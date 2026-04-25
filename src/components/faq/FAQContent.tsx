@@ -57,7 +57,7 @@ const FAQItem = ({
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full py-8 flex items-center justify-between text-left group"
             >
-                <span className="text-condensed text-xl md:text-2xl font-black italic uppercase tracking-tighter group-hover:text-[#ed1c24] transition-colors">
+                <span className="text-condensed text-xl md:text-2xl font-black italic uppercase  group-hover:text-[#ed1c24] transition-colors">
                     {question}
                 </span>
                 <div
@@ -102,7 +102,7 @@ const FAQContent = () => {
                             Knowledge Base
                         </span>
                     </motion.div>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase">
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase">
                         Frequently Asked
                         <br />
                         Questions

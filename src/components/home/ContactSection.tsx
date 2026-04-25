@@ -106,7 +106,7 @@ const ContactSection = () => {
     return (
         <section
             id="contact"
-            className="py-32 px-10 bg-[#0a0a0a] text-white overflow-hidden"
+            className="py-20 md:py-32 px-10 bg-[#0a0a0a] text-white overflow-hidden"
         >
             <div className="max-w-[1400px] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-24">
@@ -120,33 +120,33 @@ const ContactSection = () => {
                             >
                                 Connect with us
                             </motion.span>
-                            <h2 className="text-condensed text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] uppercase mb-8">
-                                Your Direct
+                            <h2 className="text-condensed text-4xl md:text-5xl font-black  leading-[0.9] uppercase mb-8">
+                                Contact Our
                                 <br />
-                                Portal
+                                Team
                             </h2>
                             <p className="text-white/30 text-sm md:text-base leading-relaxed max-w-md font-medium tracking-tight">
-                                From specialized DMV processing to premium
-                                vehicle acquisitions, our team provides
-                                high-precision automotive solutions tailored to
-                                your schedule.
+                                From fast DMV services to expert car sales and
+                                certified repairs, our team is here to help you.
+                                Get in touch for high-quality automotive
+                                solutions that fit your schedule.
                             </p>
 
                             <div className="space-y-10 mt-16">
                                 <div className="flex gap-6 items-start group">
-                                    <div className="w-12 h-12 rounded-xl bg-white/5 border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
+                                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
                                         <Phone
                                             size={18}
                                             className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
                                         />
                                     </div>
                                     <div>
-                                        <div className="text-[9px] font-black uppercase tracking-[0.3em] text-black/20 mb-1">
+                                        <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
                                             Direct Line
                                         </div>
                                         <a
                                             href="tel:7145340024"
-                                            className="text-xl font-bold tracking-tighter hover:text-[#ed1c24] transition-colors"
+                                            className="text-xl font-bold  hover:text-[#ed1c24] transition-colors"
                                         >
                                             714.534.0024
                                         </a>
@@ -154,7 +154,7 @@ const ContactSection = () => {
                                 </div>
 
                                 <div className="flex gap-6 items-start group">
-                                    <div className="w-12 h-12 rounded-xl bg-white/5 border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
+                                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
                                         <MapPin
                                             size={18}
                                             className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
@@ -164,7 +164,7 @@ const ContactSection = () => {
                                         <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
                                             HQ Location
                                         </div>
-                                        <div className="text-xl font-bold tracking-tighter italic">
+                                        <div className="text-xl font-bold  italic">
                                             8892 Garden Grove Blvd.
                                             <br />
                                             Garden Grove, CA 92844
@@ -173,14 +173,17 @@ const ContactSection = () => {
                                 </div>
 
                                 <div className="flex gap-6 items-start group">
-                                    <div className="w-12 h-12 rounded-xl bg-black/5 border border-black/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
+                                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
                                         <Clock
                                             size={18}
                                             className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
                                         />
                                     </div>
                                     <div>
-                                        <div className="text-xl font-bold tracking-tighter italic">
+                                        <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
+                                            Business Hours
+                                        </div>
+                                        <div className="text-xl font-bold  italic">
                                             MON - FRI: 8AM - 6PM
                                         </div>
                                     </div>
@@ -203,7 +206,7 @@ const ContactSection = () => {
                                     onClick={() =>
                                         setActiveForm(form.id as FormType)
                                     }
-                                    className={`flex flex-col items-center justify-center py-5 px-2 transition-all gap-2 border-r border-white/5 last:border-r-0 ${
+                                    className={`flex flex-col items-center justify-center py-5 px-2 transition-all gap-2 border-r border-white/5 last:border-r-0 cursor-pointer ${
                                         activeForm === form.id
                                             ? 'bg-white text-black'
                                             : 'text-white/20 hover:text-white hover:bg-white/5'
@@ -232,7 +235,7 @@ const ContactSection = () => {
                                             className="text-black"
                                         />
                                     </div>
-                                    <h3 className="text-2xl font-black uppercase tracking-tighter mb-4">
+                                    <h3 className="text-2xl font-black uppercase  mb-4">
                                         Inquiry Received
                                     </h3>
                                     <p className="text-white/30 max-w-sm text-sm font-medium">
@@ -885,7 +888,7 @@ const ContactSection = () => {
                                             </div>
                                             <span className="text-[10px] text-white/20 leading-relaxed group-hover:text-white/30 transition-colors font-medium uppercase tracking-tight">
                                                 I authorize{' '}
-                                                <span className="text-black/60 font-black">
+                                                <span className="text-[#ed1c24] font-black">
                                                     K2 AUTO SERVICE
                                                 </span>{' '}
                                                 to contact me regarding this

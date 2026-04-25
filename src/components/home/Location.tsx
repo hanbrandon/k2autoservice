@@ -51,7 +51,7 @@ const Location = () => {
     };
 
     return (
-        <section id="location" className="py-32 px-10">
+        <section id="location" className="py-20 md:py-32 px-10">
             <div className="max-w-[1400px] mx-auto">
                 <h2 className="section-title">VISIT K2 AUTO SERVICE</h2>
 
@@ -115,6 +115,45 @@ const Location = () => {
                             referrerPolicy="no-referrer-when-downgrade"
                             title="K2 Auto Service Location"
                         />
+                    </div>
+
+                    {/* Mobile Controls */}
+                    <div className="lg:hidden bg-black text-white p-8 space-y-8">
+                        <h3 className="text-condensed text-3xl">LOCATE US</h3>
+                        <div className="space-y-6">
+                            <form
+                                onSubmit={handleDirections}
+                                className="border-b border-white/20 pb-2 flex justify-between items-center group/input"
+                            >
+                                <input
+                                    type="text"
+                                    value={userLoc}
+                                    onChange={(e) => setUserLoc(e.target.value)}
+                                    placeholder="ENTER YOUR LOCATION"
+                                    className="bg-transparent text-xs uppercase placeholder:text-white/20 outline-none w-full font-bold tracking-wider"
+                                />
+                                <button
+                                    type="submit"
+                                    className="hover:text-[#ed1c24] transition-colors cursor-pointer"
+                                >
+                                    <Navigation size={18} />
+                                </button>
+                            </form>
+                            <div
+                                onClick={handleShare}
+                                className="border-b border-white/20 pb-2 flex justify-between items-center text-[#ed1c24] cursor-pointer group/share"
+                            >
+                                <span className="text-xs uppercase font-bold">
+                                    {copied
+                                        ? 'Copied to Clipboard!'
+                                        : 'Share Address'}
+                                </span>
+                                <Share2
+                                    size={18}
+                                    className="group-hover/share:scale-110 transition-transform"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

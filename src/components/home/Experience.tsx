@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import {
     motion,
     useScroll,
@@ -9,45 +10,46 @@ import {
 } from 'motion/react';
 
 const floors = [
-    { id: 'NEW', name: 'New Car Purchase & Lease' },
-    { id: 'USED', name: 'Certified Pre-Owned' },
-    { id: 'RENTAL', name: 'Short & Long-term Rental' },
-    { id: 'DMV', name: 'DMV & Registration' },
-    { id: 'REPAIR', name: 'Professional Repair' },
+    { id: 'REPAIR', name: 'Professional Repair', path: '/repair' },
+    { id: 'NEW', name: 'New Car Purchase & Lease', path: '/sales' },
+    { id: 'USED', name: 'Certified Pre-Owned', path: '/sales' },
+    { id: 'RENTAL', name: 'Short & Long-term Rental', path: '/rental' },
+    { id: 'DMV', name: 'DMV & Registration', path: '/dmv' },
 ];
 
 const floorData: Record<
     string,
     { title: string; subtitle: string; desc: string }
 > = {
+    REPAIR: {
+        title: 'EXPERT AUTO REPAIR',
+        subtitle: 'Certified Vehicle Maintenance',
+        desc: 'Our state-of-the-art facility features advanced diagnostics and is staffed by master technicians. We handle everything from oil changes to complex engine repairs.',
+    },
     NEW: {
-        title: 'NEW CAR ACQUISITION',
-        subtitle: 'Purchase & Leasing Solutions',
-        desc: 'Experience a seamless process for acquiring the latest models. K2 Auto Service provides competitive leasing and purchase options tailored to your professional and personal needs.',
+        title: 'NEW CAR SALES',
+        subtitle: 'Purchase & Lease Options',
+        desc: 'Drive home in the latest models with our hassle-free leasing and purchase programs. We offer competitive rates and a wide selection of new vehicles.',
     },
     USED: {
-        title: 'PREMIUM PRE-OWNED',
-        subtitle: 'Certified Quality Inventory',
-        desc: 'Every vehicle in our pre-owned collection is meticulously inspected and certified. Drive with confidence knowing your car meets our rigorous standards of excellence.',
+        title: 'CERTIFIED PRE-OWNED',
+        subtitle: 'Quality Inspected Inventory',
+        desc: 'Every used car in our inventory undergoes a rigorous safety and performance inspection. Drive with confidence in a vehicle you can trust.',
     },
     RENTAL: {
-        title: 'FLEXIBLE RENTAL',
-        subtitle: 'Short & Long-term Solutions',
-        desc: 'From premium sedans to luxury SUVs, our diverse fleet offers flexible rental options. Whether for a weekend or a month, we provide mobility with zero compromise.',
+        title: 'CAR RENTAL SERVICES',
+        subtitle: 'Short & Long-term Rentals',
+        desc: 'Need a car for a day or a month? Choose from our diverse fleet of well-maintained vehicles. Perfect for business travel or insurance replacements.',
     },
     DMV: {
-        title: 'EXPRESS REGISTRATION',
-        subtitle: 'DMV & Title Services',
-        desc: 'Save your most valuable asset: time. We handle all DMV-related administrative tasks, including title transfers, renewals, and plate replacements with professional speed.',
-    },
-    REPAIR: {
-        title: 'CERTIFIED SERVICE',
-        subtitle: 'Expert Vehicle Maintenance',
-        desc: 'Our state-of-the-art facility is equipped with specialized diagnostics and managed by master technicians. We restore your vehicle to factory-fresh standards.',
+        title: 'FAST DMV SERVICES',
+        subtitle: 'Registration & Title Help',
+        desc: 'Skip the long lines at the DMV. We provide fast registration renewals, title transfers, and out-of-state vehicle registration services.',
     },
 };
 
 const Experience = () => {
+    const router = useRouter();
     const containerRef = useRef<HTMLDivElement>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -70,31 +72,49 @@ const Experience = () => {
         }
     });
 
+    const scrollToSegment = (idx: number) => {
+        if (containerRef.current) {
+            const totalHeight = containerRef.current.offsetHeight;
+            const scrollableHeight = totalHeight - window.innerHeight;
+            const segment = 1 / floors.length;
+            // Scroll to the start of the segment
+            const targetScroll =
+                containerRef.current.offsetTop +
+                idx * segment * scrollableHeight;
+
+            window.scrollTo({
+                top: targetScroll + 10, // Small offset to ensure it triggers the index change
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <section
             ref={containerRef}
             id="experience"
             className="relative h-[400vh] bg-[#0a0a0a] text-white"
         >
-            <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden">
+            <div className="sticky top-0 h-screen w-full flex items-center pt-24 lg:pt-0 overflow-hidden">
                 <div className="max-w-[1400px] mx-auto px-10 w-full">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="mb-12"
+                        className="mb-8 md:mb-12"
                     >
                         <h2 className="section-title text-white">
                             OUR SERVICES
                         </h2>
                     </motion.div>
 
-                    <div className="flex flex-col lg:flex-row gap-20">
-                        {/* Floor List Sidebar - Horizontal Scroll on Mobile */}
-                        <div className="w-full lg:w-1/4 flex lg:flex-col overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-hide border-y border-white/5 divide-x lg:divide-x-0 lg:divide-y divide-white/5 snap-x snap-mandatory">
+                    <div className="flex flex-col lg:flex-row gap-6 lg:gap-20">
+                        {/* Floor List Sidebar - Grid on Mobile, Column on Desktop */}
+                        <div className="w-full lg:w-1/4 grid grid-cols-5 lg:flex lg:flex-col pb-4 lg:pb-0 border-y lg:border-none border-white/5 divide-x lg:divide-x-0 lg:divide-y divide-white/5">
                             {floors.map((f, idx) => (
                                 <div
                                     key={f.id}
-                                    className={`relative min-w-[200px] lg:min-w-0 w-full flex justify-between items-center py-5 px-6 transition-all duration-500 overflow-hidden snap-center ${activeIndex === idx ? 'text-black' : 'text-white/30 hover:text-white'}`}
+                                    onClick={() => scrollToSegment(idx)}
+                                    className={`relative flex flex-col lg:flex-row justify-center lg:justify-between items-center py-4 lg:py-5 px-2 lg:px-6 transition-all duration-500 overflow-hidden cursor-pointer ${activeIndex === idx ? 'text-black' : 'text-white/30 hover:text-white'}`}
                                 >
                                     {/* Background Fill for Active State */}
                                     {activeIndex === idx && (
@@ -109,19 +129,18 @@ const Experience = () => {
                                         />
                                     )}
 
-                                    <span className="relative z-10 text-condensed text-2xl tracking-tighter">
+                                    <span className="relative z-10 text-condensed text-base lg:text-2xl ">
                                         {f.id}
                                     </span>
-                                    <span className="relative z-10 text-[9px] font-black uppercase tracking-tight text-right flex-1 ml-4">
+                                    <span className="relative z-10 text-[9px] font-black uppercase tracking-tight text-right flex-1 ml-4 hidden lg:block">
                                         {f.name}
                                     </span>
                                 </div>
                             ))}
                         </div>
 
-                        {/* Experience Content */}
                         <div className="w-full lg:w-3/4">
-                            <div className="relative h-[550px] md:h-[600px]">
+                            <div className="relative h-[480px] md:h-[600px]">
                                 {floors.map((f, idx) => (
                                     <motion.div
                                         key={f.id}
@@ -175,11 +194,16 @@ const Experience = () => {
                                                                 ? 0
                                                                 : 20,
                                                     }}
-                                                    className="text-condensed text-3xl md:text-4xl mb-8 font-black uppercase tracking-tighter"
+                                                    className="text-condensed text-3xl md:text-4xl mb-8 font-black uppercase "
                                                 >
                                                     {floorData[f.id].title}
                                                 </motion.h3>
-                                                <button className="bg-[#ed1c24] px-12 py-3.5 text-[9px] font-black uppercase text-white hover:bg-black transition-all tracking-[0.4em]">
+                                                <button
+                                                    onClick={() =>
+                                                        router.push(f.path)
+                                                    }
+                                                    className="bg-[#ed1c24] px-12 py-3.5 text-[9px] font-black uppercase text-white hover:bg-white hover:text-[#ed1c24] transition-all tracking-[0.4em] cursor-pointer"
+                                                >
                                                     Explore Details
                                                 </button>
                                             </div>

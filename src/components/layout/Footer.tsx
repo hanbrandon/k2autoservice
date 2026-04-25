@@ -70,13 +70,17 @@ const Footer = () => {
 
                     <button
                         onClick={scrollToTop}
-                        className="border border-white/20 px-8 py-3 text-[11px] font-bold flex items-center gap-4 hover:bg-[#ed1c24] hover:border-[#ed1c24] transition-all"
+                        className="fixed bottom-6 right-6 z-[100] md:static bg-[#ed1c24] md:bg-transparent border-none md:border md:border-white/20 w-12 h-12 md:w-auto md:h-auto px-0 md:px-8 md:py-3 text-[11px] font-bold flex items-center justify-center md:gap-4 hover:bg-[#ed1c24] hover:border-[#ed1c24] transition-all shadow-[0_10px_30px_-10px_rgba(237,28,36,0.5)] md:shadow-none rounded-full md:rounded-none group"
                     >
-                        BACK TO TOP <ArrowUpRight size={14} />
+                        <span className="hidden md:inline">BACK TO TOP</span>
+                        <ArrowUpRight
+                            size={18}
+                            className="md:w-[14px] md:h-[14px] group-hover:-rotate-45 transition-transform"
+                        />
                     </button>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-end gap-10">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
                     <div className="text-[11px] text-white/40 leading-relaxed font-medium uppercase tracking-widest space-y-2">
                         <p>8892 Garden Grove Blvd. Garden Grove, CA 92844</p>
                         <p>
@@ -105,7 +109,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row gap-10 md:gap-20">
-                        <div className="flex flex-col items-end gap-2 text-right">
+                        <div className="flex flex-col items-start md:items-end gap-2 text-left md:text-right">
                             <span className="text-[9px] font-black tracking-[0.2em] text-[#ed1c24]">
                                 BUSINESS HOURS
                             </span>
@@ -115,7 +119,7 @@ const Footer = () => {
                                 <p>SUN: CLOSED</p>
                             </div>
                         </div>
-                        <div className="flex flex-col items-end gap-4">
+                        <div className="flex flex-col items-start md:items-end gap-4">
                             <span className="text-[9px] font-black tracking-[0.2em] text-[#ed1c24]">
                                 FOLLOW US
                             </span>

@@ -46,10 +46,10 @@ const InstagramShowcase = () => {
     return (
         <section
             id="showcase"
-            className="py-32 px-10 bg-white text-black overflow-hidden"
+            className="py-20 md:py-32 px-10 bg-white text-black overflow-hidden"
         >
             <div className="max-w-[1400px] mx-auto">
-                <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-24 gap-8">
+                <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 md:mb-24 gap-8">
                     <div>
                         <motion.div
                             initial={{ opacity: 0, x: -10 }}
@@ -61,7 +61,7 @@ const InstagramShowcase = () => {
                                 Real-Time Operations
                             </span>
                         </motion.div>
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] uppercase text-black">
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black  leading-[0.9] uppercase text-black">
                             Field
                             <br />
                             Showcase
@@ -81,7 +81,7 @@ const InstagramShowcase = () => {
                     </a>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 auto-rows-[250px] md:auto-rows-[350px]">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 auto-rows-[180px] md:auto-rows-[350px]">
                     {photos.map((item, i) => (
                         <motion.div
                             key={item.id}
@@ -90,7 +90,7 @@ const InstagramShowcase = () => {
                             transition={{ delay: i * 0.05, duration: 0.8 }}
                             className={`relative overflow-hidden group cursor-pointer border border-black/5 bg-black/[0.02] ${
                                 item.size === 'large'
-                                    ? 'col-span-2 row-span-2'
+                                    ? 'md:col-span-2 md:row-span-2 col-span-1 row-span-1'
                                     : 'col-span-1 row-span-1'
                             }`}
                         >

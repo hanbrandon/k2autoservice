@@ -46,7 +46,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 100);
+            setIsScrolled(window.scrollY > 50);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -75,15 +75,15 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-md py-0 border-b border-black/5' : 'py-0 bg-transparent'}`}
+            className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 bg-white/90 backdrop-blur-md border-b border-black/5`}
         >
             <div
-                className={`max-w-[1400px] mx-auto px-10 flex justify-between items-center text-condensed text-xl tracking-tighter transition-all duration-500 ${isScrolled ? 'h-16' : 'h-24'}`}
+                className={`max-w-[1400px] mx-auto px-10 flex justify-between items-center text-condensed text-xl  transition-all duration-500 ${isScrolled ? 'h-16' : 'h-24'}`}
             >
                 <div className="flex items-center gap-10 h-full">
                     <Link
                         href="/"
-                        className="text-2xl font-black text-[#ed1c24] cursor-pointer"
+                        className={`text-2xl font-black cursor-pointer transition-colors duration-500 text-[#ed1c24]`}
                         onClick={(e) => {
                             e.preventDefault();
                             handleNavClick({ name: 'Home', type: 'page' });
@@ -121,12 +121,12 @@ const Navbar = () => {
                 <div className="flex items-center gap-6">
                     <Link
                         href="/quote"
-                        className="hidden sm:block border border-black px-6 py-2 text-sm font-bold hover:bg-black hover:text-white transition-all"
+                        className={`hidden sm:block border border-black px-6 py-2 text-sm font-bold transition-all text-black hover:bg-black hover:text-white`}
                     >
                         GET A QUOTE
                     </Link>
                     <button
-                        className="lg:hidden"
+                        className={`lg:hidden transition-colors text-black`}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -140,9 +140,15 @@ const Navbar = () => {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: '100vh', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="fixed inset-0 bg-white z-[90] lg:hidden overflow-hidden flex flex-col justify-center p-10"
+                        className="fixed inset-0 bg-white z-[110] lg:hidden overflow-hidden flex flex-col justify-center p-10"
                     >
-                        <div className="flex flex-col gap-8 text-condensed text-4xl">
+                        <button
+                            onClick={() => setIsMenuOpen(false)}
+                            className="absolute top-10 right-10 text-black hover:text-[#ed1c24] transition-colors cursor-pointer"
+                        >
+                            <X size={32} />
+                        </button>
+                        <div className="flex flex-col gap-8 text-black text-condensed text-4xl">
                             {navItems.map((item) => (
                                 <a
                                     key={item.name}
@@ -155,7 +161,7 @@ const Navbar = () => {
                                         e.preventDefault();
                                         handleNavClick(item);
                                     }}
-                                    className={`transition-all ${activeTab === item.name ? 'text-[#ed1c24]' : 'hover:pl-4'}`}
+                                    className={`transition-all ${activeTab === item.name ? 'text-[#ed1c24]' : 'hover:pl-4 text-black'}`}
                                 >
                                     {item.name.toUpperCase()}
                                 </a>
@@ -164,16 +170,10 @@ const Navbar = () => {
                                 <Link
                                     href="/quote"
                                     onClick={() => setIsMenuOpen(false)}
-                                    className="bg-[#ed1c24] text-white py-6 text-center font-bold text-lg uppercase tracking-widest"
+                                    className="bg-[#ed1c24] text-white py-6 text-center font-bold text-lg uppercase tracking-widest cursor-pointer"
                                 >
                                     Get A Quote
                                 </Link>
-                                <button
-                                    onClick={() => setIsMenuOpen(false)}
-                                    className="bg-black text-white py-6 rounded-none font-bold text-lg uppercase tracking-widest"
-                                >
-                                    Close Menu
-                                </button>
                             </div>
                         </div>
                     </motion.div>

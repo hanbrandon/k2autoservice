@@ -95,35 +95,41 @@ const Hero = () => {
                     >
                         The Gold Standard
                     </motion.span>
-                    <h2 className="text-condensed text-4xl md:text-[5vw] mb-12 leading-[0.9] max-w-5xl font-black tracking-tighter uppercase">
+                    <h2 className="text-condensed text-4xl md:text-[5vw] mb-12 leading-[0.9] max-w-5xl font-black  uppercase">
                         Excellence in Motion,
                         <br />
                         Trust in Every Mile
                     </h2>
                     <p className="text-[10px] md:text-xs max-w-xl mb-16 font-medium tracking-[0.2em] leading-relaxed uppercase opacity-60">
-                        The premier automotive hub in the US. From certified
-                        repairs and DMV assistance to a meticulously curated
-                        inventory of new and used vehicles.
+                        Garden Grove's leading automotive center. From certified
+                        auto repairs and DMV services to a premium selection of
+                        new and used vehicles.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-8">
                         <div className="flex flex-col sm:flex-row gap-10">
                             <motion.button
+                                onClick={() =>
+                                    (window.location.href = '/sales')
+                                }
                                 style={{
                                     backgroundColor: buttonPrimaryBg,
                                     color: buttonPrimaryText,
                                 }}
-                                className="px-12 py-5 font-black uppercase tracking-[0.4em] text-[9px] hover:bg-[#ed1c24] hover:text-white transition-all shadow-xl"
+                                className="px-12 py-5 font-black uppercase tracking-[0.4em] text-[9px] hover:bg-[#ed1c24] hover:text-white transition-all shadow-xl cursor-pointer"
                             >
-                                Explore Inventory
+                                Shop All Cars
                             </motion.button>
                             <motion.button
+                                onClick={() =>
+                                    (window.location.href = '/repair')
+                                }
                                 style={{
                                     borderColor: buttonSecondaryBorder,
                                     color: buttonSecondaryText,
                                 }}
-                                className="border-[1.5px] px-12 py-5 font-black uppercase tracking-[0.4em] text-[9px] hover:bg-black hover:text-white transition-all"
+                                className="border-[1.5px] px-12 py-5 font-black uppercase tracking-[0.4em] text-[9px] hover:bg-black hover:text-white transition-all cursor-pointer"
                             >
-                                Book Service
+                                Schedule Service
                             </motion.button>
                         </div>
                     </div>
@@ -136,7 +142,7 @@ const Hero = () => {
                     }}
                     className="absolute z-50 pointer-events-none text-center"
                 >
-                    <h1 className="text-condensed text-[9vw] leading-none font-black text-white mix-blend-difference tracking-tighter whitespace-nowrap">
+                    <h1 className="text-condensed text-[9vw] leading-none font-black text-white mix-blend-difference  whitespace-nowrap">
                         K2 AUTO SERVICE
                     </h1>
                 </motion.div>
@@ -177,7 +183,7 @@ const Hero = () => {
                         }}
                         className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none"
                     >
-                        <h1 className="text-condensed text-[9vw] leading-none font-black text-white whitespace-nowrap tracking-tighter">
+                        <h1 className="text-condensed text-[9vw] leading-none font-black text-white whitespace-nowrap ">
                             K2 AUTO SERVICE
                         </h1>
                     </motion.div>

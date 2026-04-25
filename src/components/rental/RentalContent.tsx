@@ -17,23 +17,23 @@ import { useState, useEffect } from 'react';
 
 const fleetFeatures = [
     {
-        title: 'Quarterly Rotation',
-        desc: 'Our inventory is updated every 90 days to ensure you drive only the latest models with the newest safety and entertainment technology.',
+        title: 'Modern Fleet',
+        desc: 'Our inventory is updated regularly to ensure you drive the latest models with the newest safety and entertainment technology.',
         icon: <Calendar className="text-[#ed1c24]" />,
     },
     {
-        title: 'Sanitization Standard',
-        desc: 'Every vehicle undergoes a high-precision medical-grade sanitization and detailing process between each client engagement.',
+        title: 'Deep Cleaning',
+        desc: 'Every vehicle undergoes a professional sanitization and detailing process between each rental for your peace of mind.',
         icon: <Zap className="text-[#ed1c24]" />,
     },
     {
-        title: 'Insurance Liaising',
-        desc: "We coordinate directly with your insurance adjuster to provide a comparable replacement vehicle during your vehicle's repair cycle.",
+        title: 'Insurance Billing',
+        desc: 'We coordinate directly with your insurance company to provide a replacement vehicle while your car is in the shop.',
         icon: <ShieldCheck className="text-[#ed1c24]" />,
     },
     {
-        title: 'VIP Deployment',
-        desc: 'Door-to-door delivery and airport concierge services available 24/7 across the Greater Los Angeles area.',
+        title: 'Concierge Delivery',
+        desc: 'Door-to-door delivery and airport pickup services available to make your rental experience effortless.',
         icon: <MapPin className="text-[#ed1c24]" />,
     },
 ];
@@ -111,10 +111,10 @@ const RentalContent = () => {
                     >
                         Mobility Solutions
                     </motion.span>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase mb-16">
-                        Elite
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase mb-16">
+                        Car
                         <br />
-                        Mobility
+                        Rental
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <p className="text-black/60 text-lg md:text-xl font-medium leading-relaxed tracking-tight">
@@ -131,8 +131,8 @@ const RentalContent = () => {
                                         size={24}
                                         className="text-[#ed1c24]"
                                     />
-                                    <h4 className="text-condensed text-2xl font-black italic uppercase tracking-tighter italic">
-                                        Concierge Plus
+                                    <h4 className="text-condensed text-2xl font-black italic uppercase  italic">
+                                        Free Delivery & Pickup
                                     </h4>
                                 </div>
                                 <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-relaxed">
@@ -156,7 +156,7 @@ const RentalContent = () => {
                                 <div className="mb-10 group-hover:scale-110 transition-transform duration-500">
                                     {feature.icon}
                                 </div>
-                                <h3 className="text-condensed text-2xl font-black italic uppercase tracking-tighter mb-4 group-hover:text-white transition-colors">
+                                <h3 className="text-condensed text-2xl font-black italic uppercase  mb-4 group-hover:text-white transition-colors">
                                     {feature.title}
                                 </h3>
                             </div>
@@ -169,7 +169,7 @@ const RentalContent = () => {
 
                 {/* Fleet Tiers */}
                 <div className="border-t border-black/10 pt-24 mb-40">
-                    <h2 className="text-condensed text-4xl font-black italic uppercase tracking-tighter mb-16">
+                    <h2 className="text-condensed text-4xl font-black italic uppercase  mb-16">
                         Fleet Standard
                     </h2>
                     <div className="space-y-4">
@@ -184,7 +184,7 @@ const RentalContent = () => {
                                     </h4>
                                 </div>
                                 <div className="md:col-span-5">
-                                    <p className="text-xl font-bold tracking-tighter uppercase italic">
+                                    <p className="text-xl font-bold  uppercase italic">
                                         {tier.models}
                                     </p>
                                 </div>
@@ -201,10 +201,10 @@ const RentalContent = () => {
                 {/* CTA Section with Form */}
                 <section className="bg-black text-white p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-5">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase tracking-tighter mb-8 leading-none">
-                            Inquire About
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-8 leading-none">
+                            Reserve Your
                             <br />
-                            Mobility
+                            Rental
                         </h2>
                         <p className="text-white/40 mb-12 text-sm font-medium leading-relaxed">
                             Please provide your details and mobility
@@ -238,7 +238,7 @@ const RentalContent = () => {
                                     size={40}
                                     className="text-[#ed1c24] mb-4"
                                 />
-                                <h3 className="text-xl font-bold uppercase tracking-tighter italic mb-2">
+                                <h3 className="text-xl font-bold uppercase  italic mb-2">
                                     Request Received
                                 </h3>
                                 <p className="text-white/40 text-xs font-bold uppercase tracking-widest">

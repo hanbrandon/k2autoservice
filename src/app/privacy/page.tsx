@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
                             Legal Protection
                         </span>
                     </motion.div>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase">
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase">
                         Privacy
                         <br />
                         Policy
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
 
                 <article className="prose prose-slate max-w-none text-black/60 font-medium leading-relaxed tracking-tight space-y-12">
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             1. Information We Collect
                         </h2>
                         <p>
@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             2. How We Use Information
                         </h2>
                         <p>We use your information to:</p>
@@ -84,7 +84,7 @@ const PrivacyPolicy = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             3. Data Sharing & Third Parties
                         </h2>
                         <p>
@@ -111,7 +111,7 @@ const PrivacyPolicy = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             4. California Privacy Rights (CCPA)
                         </h2>
                         <p>
@@ -125,7 +125,7 @@ const PrivacyPolicy = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             5. Security
                         </h2>
                         <p>
@@ -138,7 +138,7 @@ const PrivacyPolicy = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-black text-2xl font-black italic uppercase tracking-tighter mb-6">
+                        <h2 className="text-black text-2xl font-black italic uppercase  mb-6">
                             6. Contact Us
                         </h2>
                         <p>
