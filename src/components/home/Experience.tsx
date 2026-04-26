@@ -171,7 +171,7 @@ const Experience = () => {
                                                 }}
                                                 transition={{ duration: 0.8 }}
                                                 src={`https://picsum.photos/seed/k2-${f.id.toLowerCase()}/1200/675`}
-                                                alt={f.id}
+                                                alt={floorData[f.id].title}
                                                 className="w-full h-full object-cover"
                                                 referrerPolicy="no-referrer"
                                             />

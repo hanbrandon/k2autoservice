@@ -7,6 +7,16 @@ export const metadata: Metadata = {
     title: 'Premium Car Rental & Insurance Replacements | Garden Grove, CA',
     description:
         'Need a rental car? K2 Auto Service offers luxury car rentals and insurance replacement vehicles. Flexible short and long-term rental options in Garden Grove.',
+    alternates: {
+        canonical: 'https://k2autoservice.com/rental',
+    },
+    openGraph: {
+        title: 'Premium Car Rental & Insurance Replacements | Garden Grove, CA',
+        description:
+            'Luxury car rentals and insurance replacement vehicles in Garden Grove.',
+        url: 'https://k2autoservice.com/rental',
+        type: 'article',
+    },
 };
 
 export default function RentalPage() {
