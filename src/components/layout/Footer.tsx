@@ -70,13 +70,9 @@ const Footer = () => {
 
                     <button
                         onClick={scrollToTop}
-                        className="fixed bottom-6 right-6 z-[100] md:static bg-[#ed1c24] md:bg-transparent border-none md:border md:border-white/20 w-12 h-12 md:w-auto md:h-auto px-0 md:px-8 md:py-3 text-[11px] font-bold flex items-center justify-center md:gap-4 hover:bg-[#ed1c24] hover:border-[#ed1c24] transition-all shadow-[0_10px_30px_-10px_rgba(237,28,36,0.5)] md:shadow-none rounded-full md:rounded-none group"
+                        className="border border-white/20 px-8 py-3 text-[11px] font-bold flex items-center gap-4 hover:bg-[#ed1c24] hover:border-[#ed1c24] transition-all"
                     >
-                        <span className="hidden md:inline">BACK TO TOP</span>
-                        <ArrowUpRight
-                            size={18}
-                            className="md:w-[14px] md:h-[14px] group-hover:-rotate-45 transition-transform"
-                        />
+                        BACK TO TOP <ArrowUpRight size={14} />
                     </button>
                 </div>
 
