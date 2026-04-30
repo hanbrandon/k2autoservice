@@ -126,7 +126,7 @@ const ContactSection = () => {
                                 <br />
                                 Team
                             </h2>
-                            <p className="text-white/30 text-sm md:text-base leading-relaxed max-w-md font-medium tracking-tight">
+                            <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md font-medium tracking-tight">
                                 From fast DMV services to expert car sales and
                                 certified repairs, our team is here to help you.
                                 Get in touch for high-quality automotive
@@ -138,12 +138,12 @@ const ContactSection = () => {
                                      <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
                                          <Phone
                                              size={18}
-                                             className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
+                                             className="text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                          />
                                      </div>
                                      <div className="space-y-4">
                                          <div>
-                                             <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
+                                             <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/60 mb-1">
                                                  General Inquiry
                                              </div>
                                              <a
@@ -154,7 +154,7 @@ const ContactSection = () => {
                                              </a>
                                          </div>
                                          <div>
-                                             <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
+                                             <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/60 mb-1">
                                                  Repair Dept Direct
                                              </div>
                                              <a
@@ -171,11 +171,11 @@ const ContactSection = () => {
                                      <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
                                          <MapPin
                                              size={18}
-                                             className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
+                                             className="text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                          />
                                      </div>
                                      <div>
-                                         <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
+                                         <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/60 mb-1">
                                              Shop Location
                                          </div>
                                          <a 
@@ -195,11 +195,11 @@ const ContactSection = () => {
                                     <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
                                         <Clock
                                             size={18}
-                                            className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
+                                            className="text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                         />
                                     </div>
                                     <div>
-                                        <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
+                                        <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/50 mb-1">
                                             Business Hours
                                         </div>
                                         <div className="text-xl font-bold">
@@ -226,9 +226,9 @@ const ContactSection = () => {
                                         setActiveForm(form.id as FormType)
                                     }
                                     className={`flex flex-col items-center justify-center py-5 px-2 transition-all gap-2 border-r border-white/5 last:border-r-0 cursor-pointer ${
-                                        activeForm === form.id
-                                            ? 'bg-white text-black'
-                                            : 'text-white/20 hover:text-white hover:bg-white/5'
+                                            activeForm === form.id
+                                                ? 'bg-white text-black'
+                                                : 'text-white/60 hover:text-white hover:bg-white/5'
                                     }`}
                                 >
                                     <form.icon size={16} />
@@ -257,7 +257,7 @@ const ContactSection = () => {
                                     <h3 className="text-2xl font-black uppercase  mb-4">
                                         Inquiry Received
                                     </h3>
-                                    <p className="text-white/30 max-w-sm text-sm font-medium">
+                                    <p className="text-white/60 max-w-sm text-sm font-medium">
                                         Thank you. A K2 concierge specialist
                                         will contact you shortly to process your
                                         request.
@@ -365,7 +365,7 @@ const ContactSection = () => {
                                                     </option>
                                                 </select>
                                                 <ChevronDown
-                                                    className="absolute right-0 bottom-4 text-white/20 group-hover:text-[#ed1c24] transition-colors"
+                                                    className="absolute right-0 bottom-4 text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                                     size={16}
                                                 />
                                                 <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
@@ -436,7 +436,7 @@ const ContactSection = () => {
                                                             </option>
                                                         </select>
                                                         <ChevronDown
-                                                            className="absolute right-0 bottom-4 text-white/20 group-hover:text-[#ed1c24] transition-colors"
+                                                            className="absolute right-0 bottom-4 text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                                             size={16}
                                                         />
                                                         <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
@@ -531,7 +531,7 @@ const ContactSection = () => {
                                                         </option>
                                                     </select>
                                                     <ChevronDown
-                                                        className="absolute right-0 bottom-4 text-white/20 group-hover:text-[#ed1c24] transition-colors"
+                                                        className="absolute right-0 bottom-4 text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                                         size={16}
                                                     />
                                                     <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
@@ -574,7 +574,7 @@ const ContactSection = () => {
                                                         </option>
                                                     </select>
                                                     <ChevronDown
-                                                        className="absolute right-0 bottom-4 text-white/20 group-hover:text-[#ed1c24] transition-colors"
+                                                        className="absolute right-0 bottom-4 text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                                         size={16}
                                                     />
                                                     <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
@@ -652,7 +652,7 @@ const ContactSection = () => {
                                                         </option>
                                                     </select>
                                                     <ChevronDown
-                                                        className="absolute right-0 bottom-4 text-white/20 group-hover:text-[#ed1c24] transition-colors"
+                                                        className="absolute right-0 bottom-4 text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                                         size={16}
                                                     />
                                                     <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
@@ -794,7 +794,7 @@ const ContactSection = () => {
                                                                         color.hex,
                                                                 }}
                                                             />
-                                                            <span className="text-[7px] font-black uppercase tracking-widest text-white/20 group-hover:text-black transition-colors">
+                                                            <span className="text-[7px] font-black uppercase tracking-widest text-white/60 group-hover:text-black transition-colors">
                                                                 {color.name}
                                                             </span>
                                                         </label>
@@ -829,7 +829,7 @@ const ContactSection = () => {
                                                             </option>
                                                         </select>
                                                         <ChevronDown
-                                                            className="absolute right-0 bottom-4 text-white/20 group-hover:text-[#ed1c24] transition-colors"
+                                                            className="absolute right-0 bottom-4 text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                                             size={16}
                                                         />
                                                         <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
@@ -863,7 +863,7 @@ const ContactSection = () => {
                                                             </option>
                                                         </select>
                                                         <ChevronDown
-                                                            className="absolute right-0 bottom-4 text-white/20 group-hover:text-[#ed1c24] transition-colors"
+                                                            className="absolute right-0 bottom-4 text-white/60 group-hover:text-[#ed1c24] transition-colors"
                                                             size={16}
                                                         />
                                                         <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
@@ -905,7 +905,7 @@ const ContactSection = () => {
                                                     className="absolute text-white opacity-0 peer-checked:opacity-100 transition-opacity"
                                                 />
                                             </div>
-                                            <span className="text-[10px] text-white/20 leading-relaxed group-hover:text-white/30 transition-colors font-medium uppercase tracking-tight">
+                                            <span className="text-[10px] text-white/60 leading-relaxed group-hover:text-white/60 transition-colors font-medium uppercase tracking-tight">
                                                 I authorize{' '}
                                                 <span className="text-[#ed1c24] font-black">
                                                     K2 AUTO GROUP

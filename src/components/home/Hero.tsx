@@ -169,6 +169,7 @@ const Hero = () => {
                             alt="K2 Auto Premium"
                             className="w-full h-full object-cover brightness-[0.5]"
                             referrerPolicy="no-referrer"
+                            fetchPriority="high"
                         />
                     </motion.div>
 

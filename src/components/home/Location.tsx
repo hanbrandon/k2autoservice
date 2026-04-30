@@ -132,7 +132,7 @@ const Location = () => {
                                     value={userLoc}
                                     onChange={(e) => setUserLoc(e.target.value)}
                                     placeholder="ENTER YOUR LOCATION"
-                                    className="bg-transparent text-xs uppercase placeholder:text-white/20 outline-none w-full font-bold tracking-wider"
+                                    className="bg-transparent text-xs uppercase placeholder:text-white/60 outline-none w-full font-bold tracking-wider"
                                 />
                                 <button
                                     type="submit"

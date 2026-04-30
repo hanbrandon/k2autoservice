@@ -96,7 +96,7 @@ const RentalContent = () => {
     };
 
     const labelStyles =
-        'text-[9px] font-black uppercase tracking-[0.3em] text-white/30 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
+        'text-[9px] font-black uppercase tracking-[0.3em] text-white/60 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
     const inputStyles =
         'w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight placeholder:text-white/5 text-white transition-all';
 
@@ -135,7 +135,7 @@ const RentalContent = () => {
                                         Free Delivery & Pickup
                                     </h4>
                                 </div>
-                                <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-relaxed">
+                                <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest leading-relaxed">
                                     Complimentary pick-up and drop-off within 25
                                     miles of our Garden Grove HQ. Personalized
                                     vehicle orientation included.
@@ -189,7 +189,7 @@ const RentalContent = () => {
                                     </p>
                                 </div>
                                 <div className="md:col-span-4 text-right">
-                                    <p className="text-black/30 text-[10px] font-black uppercase tracking-widest">
+                                    <p className="text-black/60 text-[10px] font-black uppercase tracking-widest">
                                         {tier.detail}
                                     </p>
                                 </div>

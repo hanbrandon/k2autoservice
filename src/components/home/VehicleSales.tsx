@@ -32,7 +32,7 @@ const VehicleSales = () => {
                         <h2 className="text-condensed text-4xl md:text-5xl font-black italic  mb-4 uppercase">
                             Vehicle Sales
                         </h2>
-                        <p className="text-white/20 uppercase tracking-[0.4em] font-black text-[9px]">
+                        <p className="text-white/60 uppercase tracking-[0.4em] font-black text-[9px]">
                             Quality Selection / New & Used Vehicles
                         </p>
                     </div>

@@ -94,7 +94,7 @@ const DMVContent = () => {
     };
 
     const labelStyles =
-        'text-[9px] font-black uppercase tracking-[0.3em] text-white/30 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
+        'text-[9px] font-black uppercase tracking-[0.3em] text-white/60 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
     const inputStyles =
         'w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight placeholder:text-white/5 text-white transition-all';
 
@@ -205,7 +205,7 @@ const DMVContent = () => {
                             <br />
                             Request
                         </h2>
-                        <p className="text-white/40 mb-12 text-sm font-medium leading-relaxed">
+                        <p className="text-white/60 mb-12 text-sm font-medium leading-relaxed">
                             Need expedited DMV processing or insurance
                             coordination? Submit your request below for a
                             priority review.

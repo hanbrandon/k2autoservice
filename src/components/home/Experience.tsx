@@ -202,7 +202,7 @@ const Experience = () => {
                                                     onClick={() =>
                                                         router.push(f.path)
                                                     }
-                                                    className="bg-[#ed1c24] px-12 py-3.5 text-[9px] font-black uppercase text-white hover:bg-white hover:text-[#ed1c24] transition-all tracking-[0.4em] cursor-pointer"
+                                                    className="bg-[#ed1c24] px-12 py-3.5 text-[11px] font-black uppercase text-white hover:bg-white hover:text-[#ed1c24] transition-all tracking-[0.4em] cursor-pointer"
                                                 >
                                                     Explore Details
                                                 </button>
@@ -235,7 +235,7 @@ const Experience = () => {
                                                                 ? 1
                                                                 : 0,
                                                     }}
-                                                    className="text-white/70 leading-relaxed font-medium text-sm md:text-base max-w-lg"
+                                                    className="text-white/80 leading-relaxed font-medium text-sm md:text-base max-w-lg"
                                                 >
                                                     {floorData[f.id].desc}
                                                 </motion.p>
