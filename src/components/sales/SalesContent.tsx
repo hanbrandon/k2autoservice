@@ -111,18 +111,18 @@ const SalesContent = () => {
                     <motion.span
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block italic"
+                        className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block"
                     >
                         Advisory & Acquisition
                     </motion.span>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase mb-16">
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black  leading-[0.9] uppercase mb-16">
                         Expert
                         <br />
                         Car Sales
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <p className="text-black/60 text-lg md:text-xl font-medium leading-relaxed tracking-tight">
-                            K2 Auto Service functions as a private automotive
+                            K2 Auto Group functions as a private automotive
                             advisory, moving beyond traditional dealership
                             models. We act exclusively as your representative,
                             ensuring that every vehicle acquisition or lease is
@@ -159,7 +159,7 @@ const SalesContent = () => {
                                 <div className="w-12 h-12 bg-black flex items-center justify-center">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-condensed text-3xl font-black italic uppercase ">
+                                <h3 className="text-condensed text-3xl font-black uppercase ">
                                     {item.title}
                                 </h3>
                             </div>
@@ -172,7 +172,7 @@ const SalesContent = () => {
 
                 {/* Process Section */}
                 <section className="bg-black text-white p-12 md:p-24 overflow-hidden mb-40">
-                    <h2 className="text-condensed text-4xl font-black italic uppercase  mb-20 text-center">
+                    <h2 className="text-condensed text-4xl font-black uppercase  mb-20 text-center">
                         Acquisition Lifecycle
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -184,7 +184,7 @@ const SalesContent = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                             >
-                                <span className="text-7xl font-black italic text-white/5 absolute -top-10 -left-4">
+                                <span className="text-7xl font-black text-white/5 absolute -top-10 -left-4">
                                     {step.step}
                                 </span>
                                 <div className="relative z-10 pt-4">
@@ -203,7 +203,7 @@ const SalesContent = () => {
                 {/* CTA Section with Form */}
                 <section className="bg-black text-white p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-5">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-8 leading-none">
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black uppercase  mb-8 leading-none">
                             Find Your
                             <br />
                             Next Car
@@ -240,7 +240,7 @@ const SalesContent = () => {
                                     size={40}
                                     className="text-[#ed1c24] mb-4"
                                 />
-                                <h3 className="text-xl font-bold uppercase  italic mb-2">
+                                <h3 className="text-xl font-bold uppercase mb-2">
                                     Request Filed
                                 </h3>
                                 <p className="text-white/40 text-xs font-bold uppercase tracking-widest">
@@ -272,7 +272,7 @@ const SalesContent = () => {
                                         >
                                             Phone Number{' '}
                                             {errors.phone && (
-                                                <span className="ml-2 font-bold tracking-normal italic">
+                                                <span className="ml-2 font-bold tracking-normal">
                                                     (10 DIGITS)
                                                 </span>
                                             )}
@@ -361,7 +361,7 @@ const SalesContent = () => {
 
                 <footer className="mt-32 pt-16 border-t border-black/5">
                     <p className="text-black/30 text-[9px] font-black uppercase tracking-[0.4em] leading-loose max-w-4xl">
-                        K2 Auto Service is a licensed automotive brokerage. All
+                        K2 Auto Group is a licensed automotive brokerage. All
                         vehicle sales are subject to strict compliance with
                         California DMV regulations and consumer protection laws.
                     </p>

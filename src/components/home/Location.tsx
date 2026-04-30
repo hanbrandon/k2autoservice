@@ -31,7 +31,7 @@ const Location = () => {
         if (navigator.share) {
             try {
                 await navigator.share({
-                    title: 'K2 Auto Service',
+                    title: 'K2 Auto Group',
                     text: address,
                     url: googleMapsUrl,
                 });
@@ -53,7 +53,7 @@ const Location = () => {
     return (
         <section id="location" className="py-20 md:py-32 px-10">
             <div className="max-w-[1400px] mx-auto">
-                <h2 className="section-title">VISIT K2 AUTO SERVICE</h2>
+                <h2 className="section-title">VISIT K2 AUTO GROUP</h2>
 
                 <div className="relative border border-black/5 overflow-hidden">
                     {/* Find Fast Path Sidebar overlay */}
@@ -113,7 +113,7 @@ const Location = () => {
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="K2 Auto Service Location"
+                            title="K2 Auto Group Location"
                         />
                     </div>
 

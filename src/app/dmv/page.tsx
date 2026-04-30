@@ -4,17 +4,17 @@ import DMVContent from '@/components/dmv/DMVContent';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Fast DMV Services & Registration | Garden Grove, CA',
+    title: 'Expedited DMV Registration & Title Services',
     description:
-        'Skip the lines at the DMV. K2 Auto Service offers fast vehicle registration, title transfers, and out-of-state transitions in Garden Grove.',
+        'Skip the lines at the DMV. K2 Auto Group offers expedited vehicle registration, title transfers, and out-of-state transitions in Garden Grove, CA.',
     alternates: {
-        canonical: 'https://k2autoservice.com/dmv',
+        canonical: 'https://k2motorgroup.com/dmv',
     },
     openGraph: {
-        title: 'Fast DMV Services & Registration | Garden Grove, CA',
+        title: 'Expedited DMV Registration & Title Services | K2 Auto Group',
         description:
-            'Expedited DMV services and registration help in Garden Grove.',
-        url: 'https://k2autoservice.com/dmv',
+            'Professional DMV registration and title services in Garden Grove.',
+        url: 'https://k2motorgroup.com/dmv',
         type: 'article',
     },
 };

@@ -9,8 +9,8 @@ const faqs = [
         category: 'General',
         questions: [
             {
-                q: 'What makes K2 Auto Service different from other service centers?',
-                a: "K2 Auto Service operates on a 'Manufacturer Standard' protocol. Unlike generic shops, we use factory-direct diagnostic tools, original OEM parts, and follow specific manufacturer service bulletins for every procedure, ensuring your warranty and vehicle integrity remain intact.",
+                q: 'What makes K2 Auto Group different from other service centers?',
+                a: "K2 Auto Group operates on a 'Manufacturer Standard' protocol. Unlike generic shops, we use factory-direct diagnostic tools, original OEM parts, and follow specific manufacturer service bulletins for every procedure, ensuring your warranty and vehicle integrity remain intact.",
             },
             {
                 q: 'Do you provide pick-up and delivery services?',
@@ -27,7 +27,7 @@ const faqs = [
             },
             {
                 q: 'Do you offer a warranty on repairs?',
-                a: "All collision repairs performed at K2 Auto Service come with a limited lifetime warranty on workmanship and a manufacturer's warranty on all genuine parts used.",
+                a: "All collision repairs performed at K2 Auto Group come with a limited lifetime warranty on workmanship and a manufacturer's warranty on all genuine parts used.",
             },
         ],
     },
@@ -57,7 +57,7 @@ const FAQItem = ({
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full py-8 flex items-center justify-between text-left group"
             >
-                <span className="text-condensed text-xl md:text-2xl font-black italic uppercase  group-hover:text-[#ed1c24] transition-colors">
+                <span className="text-condensed text-xl md:text-2xl font-black uppercase  group-hover:text-[#ed1c24] transition-colors">
                     {question}
                 </span>
                 <div
@@ -98,11 +98,11 @@ const FAQContent = () => {
                         className="flex items-center gap-4 text-[#ed1c24] mb-8"
                     >
                         <HelpCircle size={14} />
-                        <span className="text-[10px] font-black tracking-[0.5em] uppercase italic">
+                        <span className="text-[10px] font-black tracking-[0.5em] uppercase">
                             Knowledge Base
                         </span>
                     </motion.div>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase">
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black  leading-[0.9] uppercase">
                         Frequently Asked
                         <br />
                         Questions

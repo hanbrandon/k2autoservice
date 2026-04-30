@@ -18,6 +18,7 @@ import {
     ChevronDown,
 } from 'lucide-react';
 import { cn } from '@/utils/cn';
+import { BUSINESS_INFO } from '@/utils/businessInfo';
 
 type FormType = 'NEW_CAR' | 'BUY_USED' | 'SELL_CAR' | 'DMV' | 'REPAIR';
 
@@ -101,7 +102,7 @@ const ContactSection = () => {
     const inputStyles =
         'w-full bg-transparent pb-3 focus:outline-none font-bold text-lg md:text-xl uppercase tracking-tight placeholder:text-white/10 text-white transition-all';
     const selectStyles =
-        'w-full bg-transparent pb-3 focus:outline-none font-bold text-lg md:text-xl uppercase tracking-tight text-white appearance-none cursor-pointer transition-all relative z-10';
+        'w-full bg-transparent pb-3 focus:outline-none font-bold text-lg md:text-xl uppercase tracking-tight text-white appearance-none cursor-pointer transition-all relative z-10 [&_option]:bg-[#0a0a0a] [&_option]:text-white';
 
     return (
         <section
@@ -120,7 +121,7 @@ const ContactSection = () => {
                             >
                                 Connect with us
                             </motion.span>
-                            <h2 className="text-condensed text-4xl md:text-5xl font-black  leading-[0.9] uppercase mb-8">
+                            <h2 className="text-condensed text-5xl md:text-8xl font-black leading-[0.9] uppercase mb-8">
                                 Contact Our
                                 <br />
                                 Team
@@ -132,45 +133,63 @@ const ContactSection = () => {
                                 solutions that fit your schedule.
                             </p>
 
-                            <div className="space-y-10 mt-16">
-                                <div className="flex gap-6 items-start group">
-                                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
-                                        <Phone
-                                            size={18}
-                                            className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
-                                        />
-                                    </div>
-                                    <div>
-                                        <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
-                                            Direct Line
-                                        </div>
-                                        <a
-                                            href="tel:7145340024"
-                                            className="text-xl font-bold  hover:text-[#ed1c24] transition-colors"
-                                        >
-                                            714.534.0024
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="flex gap-6 items-start group">
-                                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
-                                        <MapPin
-                                            size={18}
-                                            className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
-                                        />
-                                    </div>
-                                    <div>
-                                        <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
-                                            HQ Location
-                                        </div>
-                                        <div className="text-xl font-bold  italic">
-                                            8892 Garden Grove Blvd.
-                                            <br />
-                                            Garden Grove, CA 92844
-                                        </div>
-                                    </div>
-                                </div>
+                             <div className="space-y-10 mt-16">
+                                 <div className="flex gap-6 items-start group">
+                                     <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
+                                         <Phone
+                                             size={18}
+                                             className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
+                                         />
+                                     </div>
+                                     <div className="space-y-4">
+                                         <div>
+                                             <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
+                                                 General Inquiry
+                                             </div>
+                                             <a
+                                                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                                                 className="text-xl font-bold hover:text-[#ed1c24] transition-colors"
+                                             >
+                                                 {BUSINESS_INFO.phone}
+                                             </a>
+                                         </div>
+                                         <div>
+                                             <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
+                                                 Repair Dept Direct
+                                             </div>
+                                             <a
+                                                 href={`tel:${BUSINESS_INFO.repairPhoneRaw}`}
+                                                 className="text-xl font-bold hover:text-[#ed1c24] transition-colors"
+                                             >
+                                                 {BUSINESS_INFO.repairPhone}
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+ 
+                                 <div className="flex gap-6 items-start group">
+                                     <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
+                                         <MapPin
+                                             size={18}
+                                             className="text-white/30 group-hover:text-[#ed1c24] transition-colors"
+                                         />
+                                     </div>
+                                     <div>
+                                         <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
+                                             Shop Location
+                                         </div>
+                                         <a 
+                                            href={BUSINESS_INFO.googleMapsUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-xl font-bold hover:text-[#ed1c24] transition-colors block leading-tight"
+                                         >
+                                             8892 Garden Grove Blvd.
+                                             <br />
+                                             Garden Grove, CA 92844
+                                         </a>
+                                     </div>
+                                 </div>
 
                                 <div className="flex gap-6 items-start group">
                                     <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#ed1c24]/10 group-hover:border-[#ed1c24]/30 transition-all shrink-0">
@@ -183,7 +202,7 @@ const ContactSection = () => {
                                         <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 mb-1">
                                             Business Hours
                                         </div>
-                                        <div className="text-xl font-bold  italic">
+                                        <div className="text-xl font-bold">
                                             MON - FRI: 8AM - 6PM
                                         </div>
                                     </div>
@@ -889,7 +908,7 @@ const ContactSection = () => {
                                             <span className="text-[10px] text-white/20 leading-relaxed group-hover:text-white/30 transition-colors font-medium uppercase tracking-tight">
                                                 I authorize{' '}
                                                 <span className="text-[#ed1c24] font-black">
-                                                    K2 AUTO SERVICE
+                                                    K2 AUTO GROUP
                                                 </span>{' '}
                                                 to contact me regarding this
                                                 strategic inquiry via encrypted

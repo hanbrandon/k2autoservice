@@ -117,18 +117,18 @@ const RepairContent = () => {
                     <motion.span
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block italic"
+                        className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block"
                     >
                         Engineering Standard
                     </motion.span>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase mb-16">
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black  leading-[0.9] uppercase mb-16">
                         Expert Auto
                         <br />
                         Repair
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <p className="text-black/60 text-lg md:text-xl font-medium leading-relaxed tracking-tight">
-                            K2 Auto Service operates a state-of-the-art facility
+                            K2 Auto Group operates a state-of-the-art facility
                             designed specifically for high-performance and
                             luxury vehicle maintenance. Our technical
                             environment is maintained to surgical standards,
@@ -178,7 +178,7 @@ const RepairContent = () => {
                                 <div className="w-12 h-12 bg-black flex items-center justify-center">
                                     {service.icon}
                                 </div>
-                                <h3 className="text-condensed text-3xl font-black italic uppercase ">
+                                <h3 className="text-condensed text-3xl font-black uppercase ">
                                     {service.title}
                                 </h3>
                             </div>
@@ -191,13 +191,13 @@ const RepairContent = () => {
 
                 {/* Technical Specification Table */}
                 <div className="bg-black text-white p-12 md:p-20 mb-40">
-                    <h2 className="text-condensed text-4xl font-black italic uppercase  mb-16">
+                    <h2 className="text-condensed text-4xl font-black uppercase  mb-16">
                         Service Protocols
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                         {technicalDetails.map((tech) => (
                             <div key={tech.category}>
-                                <h4 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] mb-8 italic border-b border-[#ed1c24]/30 pb-4">
+                                <h4 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] mb-8 border-b border-[#ed1c24]/30 pb-4">
                                     {tech.category}
                                 </h4>
                                 <ul className="space-y-4">
@@ -219,7 +219,7 @@ const RepairContent = () => {
                 {/* CTA Section with Form */}
                 <section className="bg-black text-white p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-5">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-8 leading-none">
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black uppercase  mb-8 leading-none">
                             Schedule Your
                             <br />
                             Repair
@@ -256,7 +256,7 @@ const RepairContent = () => {
                                     size={40}
                                     className="text-[#ed1c24] mb-4"
                                 />
-                                <h3 className="text-xl font-bold uppercase  italic mb-2">
+                                <h3 className="text-xl font-bold uppercase mb-2">
                                     Request Logged
                                 </h3>
                                 <p className="text-white/40 text-xs font-bold uppercase tracking-widest">

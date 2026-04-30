@@ -143,7 +143,7 @@ const Hero = () => {
                     className="absolute z-50 pointer-events-none text-center"
                 >
                     <h1 className="text-condensed text-[9vw] leading-none font-black text-white mix-blend-difference  whitespace-nowrap">
-                        K2 AUTO SERVICE
+                        K2 AUTO GROUP
                     </h1>
                 </motion.div>
 
@@ -184,7 +184,7 @@ const Hero = () => {
                         className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none"
                     >
                         <h1 className="text-condensed text-[9vw] leading-none font-black text-white whitespace-nowrap ">
-                            K2 AUTO SERVICE
+                            K2 AUTO GROUP
                         </h1>
                     </motion.div>
                 </motion.div>

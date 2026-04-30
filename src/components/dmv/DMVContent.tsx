@@ -105,19 +105,19 @@ const DMVContent = () => {
                     <motion.span
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block italic"
+                        className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block"
                     >
                         Administrative & Claims Support
                     </motion.span>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase mb-16">
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black  leading-[0.9] uppercase mb-16">
                         DMV &<br />
                         Registration
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <p className="text-black/60 text-lg md:text-xl font-medium leading-relaxed tracking-tight">
-                            K2 Auto Service functions as your professional
-                            liaison with the Bureau of Automotive Repair and the
-                            DMV. Our objective is to eliminate the friction of
+                            K2 Auto Group functions as your professional liaison
+                            with the Bureau of Automotive Repair and the DMV.
+                            Our objective is to eliminate the friction of
                             vehicle ownership through expert documentation
                             management and aggressive insurance coordination.
                         </p>
@@ -153,7 +153,7 @@ const DMVContent = () => {
                                 {section.icon}
                             </div>
                             <div>
-                                <h3 className="text-condensed text-3xl font-black italic uppercase  mb-4">
+                                <h3 className="text-condensed text-3xl font-black uppercase  mb-4">
                                     {section.title}
                                 </h3>
                                 <p className="text-black/40 text-base font-medium leading-relaxed tracking-tight">
@@ -170,7 +170,7 @@ const DMVContent = () => {
                         <AlertTriangle size={200} />
                     </div>
                     <div className="relative z-10">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-16 italic">
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black uppercase  mb-16">
                             Collision Claim
                             <br />
                             Management
@@ -200,7 +200,7 @@ const DMVContent = () => {
                 {/* CTA Section with Form */}
                 <section className="bg-black text-white p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-5">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-8 leading-none">
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black uppercase  mb-8 leading-none">
                             DMV Service
                             <br />
                             Request
@@ -237,7 +237,7 @@ const DMVContent = () => {
                                     size={40}
                                     className="text-[#ed1c24] mb-4"
                                 />
-                                <h3 className="text-xl font-bold uppercase  italic mb-2">
+                                <h3 className="text-xl font-bold uppercase mb-2">
                                     Request Processed
                                 </h3>
                                 <p className="text-white/40 text-xs font-bold uppercase tracking-widest">
@@ -269,7 +269,7 @@ const DMVContent = () => {
                                         >
                                             Phone Number{' '}
                                             {errors.phone && (
-                                                <span className="ml-2 font-bold tracking-normal italic">
+                                                <span className="ml-2 font-bold tracking-normal">
                                                     (10 DIGITS)
                                                 </span>
                                             )}
@@ -355,7 +355,7 @@ const DMVContent = () => {
 
                 <footer className="mt-32 pt-16 border-t border-black/5">
                     <p className="text-black/30 text-[9px] font-black uppercase tracking-[0.4em] leading-loose max-w-4xl">
-                        K2 Auto Service is not an insurance provider. Our claims
+                        K2 Auto Group is not an insurance provider. Our claims
                         assistance is a concierge service to support the repair
                         process. DMV services are subject to state fees and
                         documentation availability.

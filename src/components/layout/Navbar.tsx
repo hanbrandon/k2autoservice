@@ -89,7 +89,7 @@ const Navbar = () => {
                             handleNavClick({ name: 'Home', type: 'page' });
                         }}
                     >
-                        K2 AUTO SERVICE
+                        K2 AUTO GROUP
                     </Link>
                     <div className="hidden lg:flex items-center h-full">
                         {navItems.map((item) => {

@@ -1,17 +1,18 @@
 import React from 'react';
+import { BUSINESS_INFO } from '@/utils/businessInfo';
 
 const JSONLD = () => {
     const businessSchema = {
         '@context': 'https://schema.org',
         '@type': 'AutoRepair',
-        name: 'K2 Auto Service',
-        image: 'https://k2autoservice.com/logo.png', // Update with actual logo URL
-        '@id': 'https://k2autoservice.com',
-        url: 'https://k2autoservice.com',
-        telephone: '+1-714-534-0024',
+        name: 'K2 Auto Group',
+        image: `${BUSINESS_INFO.siteUrl}/og-image.png`, 
+        '@id': BUSINESS_INFO.siteUrl,
+        url: BUSINESS_INFO.siteUrl,
+        telephone: `+1-${BUSINESS_INFO.phoneRaw.slice(0, 3)}-${BUSINESS_INFO.phoneRaw.slice(3, 6)}-${BUSINESS_INFO.phoneRaw.slice(6)}`,
         address: {
             '@type': 'PostalAddress',
-            streetAddress: '8892 Garden Grove Blvd.',
+            streetAddress: BUSINESS_INFO.address.split('.')[0] + '.',
             addressLocality: 'Garden Grove',
             addressRegion: 'CA',
             postalCode: '92844',
@@ -43,12 +44,12 @@ const JSONLD = () => {
             },
         ],
         sameAs: [
-            'https://www.instagram.com/k2autoservice', // Update with actual social links
-            'https://www.threads.net/@k2autoservice',
+            `https://www.instagram.com/${BUSINESS_INFO.instagram}`,
+            `https://www.threads.net/@${BUSINESS_INFO.instagram}`,
         ],
         priceRange: '$$',
         description:
-            "K2 Auto Service is Garden Grove's premier automotive center. We provide certified auto repairs, expedited DMV services, and a curated selection of new and pre-owned vehicles. Professional care for all makes and models.",
+            "K2 Auto Group is Garden Grove's premier automotive center. We provide certified auto repairs, expedited DMV services, and a curated selection of new and pre-owned vehicles. Professional care for all makes and models.",
         hasOfferCatalog: {
             '@type': 'OfferCatalog',
             name: 'Automotive Services',

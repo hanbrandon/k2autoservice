@@ -107,18 +107,18 @@ const RentalContent = () => {
                     <motion.span
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block italic"
+                        className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block"
                     >
                         Mobility Solutions
                     </motion.span>
-                    <h1 className="text-condensed text-5xl md:text-8xl font-black italic  leading-[0.9] uppercase mb-16">
+                    <h1 className="text-condensed text-5xl md:text-8xl font-black  leading-[0.9] uppercase mb-16">
                         Car
                         <br />
                         Rental
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <p className="text-black/60 text-lg md:text-xl font-medium leading-relaxed tracking-tight">
-                            K2 Auto Service provides seamless mobility solutions
+                            K2 Auto Group provides seamless mobility solutions
                             that go beyond traditional car rental. Our fleet is
                             curated to meet the standards of executive travel,
                             high-end temporary replacement, and long-term
@@ -131,7 +131,7 @@ const RentalContent = () => {
                                         size={24}
                                         className="text-[#ed1c24]"
                                     />
-                                    <h4 className="text-condensed text-2xl font-black italic uppercase  italic">
+                                    <h4 className="text-condensed text-2xl font-black uppercase">
                                         Free Delivery & Pickup
                                     </h4>
                                 </div>
@@ -156,7 +156,7 @@ const RentalContent = () => {
                                 <div className="mb-10 group-hover:scale-110 transition-transform duration-500">
                                     {feature.icon}
                                 </div>
-                                <h3 className="text-condensed text-2xl font-black italic uppercase  mb-4 group-hover:text-white transition-colors">
+                                <h3 className="text-condensed text-2xl font-black uppercase  mb-4 group-hover:text-white transition-colors">
                                     {feature.title}
                                 </h3>
                             </div>
@@ -169,7 +169,7 @@ const RentalContent = () => {
 
                 {/* Fleet Tiers */}
                 <div className="border-t border-black/10 pt-24 mb-40">
-                    <h2 className="text-condensed text-4xl font-black italic uppercase  mb-16">
+                    <h2 className="text-condensed text-4xl font-black uppercase  mb-16">
                         Fleet Standard
                     </h2>
                     <div className="space-y-4">
@@ -179,12 +179,12 @@ const RentalContent = () => {
                                 className="group grid grid-cols-1 md:grid-cols-12 gap-8 py-10 border-b border-black/5 hover:bg-black/5 px-8 transition-colors"
                             >
                                 <div className="md:col-span-3">
-                                    <h4 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] italic">
+                                    <h4 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em]">
                                         {tier.name}
                                     </h4>
                                 </div>
                                 <div className="md:col-span-5">
-                                    <p className="text-xl font-bold  uppercase italic">
+                                    <p className="text-xl font-bold  uppercase">
                                         {tier.models}
                                     </p>
                                 </div>
@@ -201,7 +201,7 @@ const RentalContent = () => {
                 {/* CTA Section with Form */}
                 <section className="bg-black text-white p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div className="lg:col-span-5">
-                        <h2 className="text-condensed text-4xl md:text-5xl font-black italic uppercase  mb-8 leading-none">
+                        <h2 className="text-condensed text-4xl md:text-5xl font-black uppercase  mb-8 leading-none">
                             Reserve Your
                             <br />
                             Rental
@@ -238,7 +238,7 @@ const RentalContent = () => {
                                     size={40}
                                     className="text-[#ed1c24] mb-4"
                                 />
-                                <h3 className="text-xl font-bold uppercase  italic mb-2">
+                                <h3 className="text-xl font-bold uppercase mb-2">
                                     Request Received
                                 </h3>
                                 <p className="text-white/40 text-xs font-bold uppercase tracking-widest">
@@ -270,7 +270,7 @@ const RentalContent = () => {
                                         >
                                             Phone Number{' '}
                                             {errors.phone && (
-                                                <span className="ml-2 font-bold tracking-normal italic">
+                                                <span className="ml-2 font-bold tracking-normal">
                                                     (10 DIGITS REQUIRED)
                                                 </span>
                                             )}

@@ -1,4 +1,4 @@
-# K2 Auto Service
+# K2 Auto Group
 
 Premium automotive landing page built with Next.js and Tailwind CSS.
 

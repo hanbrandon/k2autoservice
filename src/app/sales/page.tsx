@@ -4,16 +4,16 @@ import SalesContent from '@/components/sales/SalesContent';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'New & Used Car Sales | Leasing in Garden Grove, CA',
+    title: 'Premium Car Sales & Leasing Advisory',
     description:
-        'Find your next vehicle at K2 Auto Service. Expert car sales, flexible leasing options, and a premium selection of certified pre-owned cars in Garden Grove.',
+        'K2 Auto Group provides expert car sales, strategic leasing options, and a premium selection of certified pre-owned vehicles in Garden Grove, CA.',
     alternates: {
-        canonical: 'https://k2autoservice.com/sales',
+        canonical: 'https://k2motorgroup.com/sales',
     },
     openGraph: {
-        title: 'New & Used Car Sales | Leasing in Garden Grove, CA',
-        description: 'Premium car sales and leasing options in Garden Grove.',
-        url: 'https://k2autoservice.com/sales',
+        title: 'New & Used Car Sales | K2 Auto Group',
+        description: 'Premium car sales and leasing advisory in Garden Grove.',
+        url: 'https://k2motorgroup.com/sales',
         type: 'article',
     },
 };

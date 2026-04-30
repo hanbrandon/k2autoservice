@@ -2,8 +2,10 @@
 
 import { motion } from 'motion/react';
 import { Instagram, ArrowUpRight, Maximize2 } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { BUSINESS_INFO } from '@/utils/businessInfo';
 
-const photos = [
+const localPhotos = [
     {
         id: 1,
         url: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=800',
@@ -43,6 +45,47 @@ const photos = [
 ];
 
 const InstagramShowcase = () => {
+    const [photos, setPhotos] = useState(localPhotos);
+
+    useEffect(() => {
+        const fetchInstagram = async () => {
+            const feedId = process.env.NEXT_PUBLIC_BEHOLD_FEED_ID;
+            if (!feedId) return;
+
+            try {
+                const response = await fetch(
+                    `https://behold.so/api/v2/feed/${feedId}`,
+                );
+                if (response.ok) {
+                    const data = await response.json();
+                    if (Array.isArray(data) && data.length > 0) {
+                        const formatted = data
+                            .slice(0, 6)
+                            .map((post: any, index: number) => ({
+                                id: post.id,
+                                url: post.mediaUrl,
+                                permalink: post.permalink,
+                                size:
+                                    index === 0 || index === 4
+                                        ? 'large'
+                                        : 'small',
+                                tag:
+                                    post.caption
+                                        ?.split(' ')[0]
+                                        ?.replace('#', '')
+                                        ?.toUpperCase() || 'SHOWCASE',
+                            }));
+                        setPhotos(formatted);
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to fetch Instagram feed:', error);
+            }
+        };
+
+        fetchInstagram();
+    }, []);
+
     return (
         <section
             id="showcase"
@@ -69,11 +112,11 @@ const InstagramShowcase = () => {
                     </div>
 
                     <a
-                        href="https://instagram.com/k2autoservice"
+                        href={`https://instagram.com/${BUSINESS_INFO.instagram}`}
                         target="_blank"
                         className="group flex items-center gap-5 text-[9px] font-black tracking-[0.4em] uppercase text-black/20 hover:text-black transition-all border-b border-black/5 pb-2"
                     >
-                        Follow @k2autoservice
+                        Follow @{BUSINESS_INFO.instagram}
                         <ArrowUpRight
                             size={14}
                             className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-[#ed1c24]"
@@ -93,6 +136,14 @@ const InstagramShowcase = () => {
                                     ? 'md:col-span-2 md:row-span-2 col-span-1 row-span-1'
                                     : 'col-span-1 row-span-1'
                             }`}
+                            onClick={() => {
+                                if ('permalink' in item) {
+                                    window.open(
+                                        item.permalink as string,
+                                        '_blank',
+                                    );
+                                }
+                            }}
                         >
                             <img
                                 src={item.url}

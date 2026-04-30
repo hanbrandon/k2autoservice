@@ -3,15 +3,19 @@ import './globals.css';
 import JSONLD from '@/components/seo/JSONLD';
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://k2autoservice.com'),
+    metadataBase: new URL('https://k2motorgroup.com'),
+    icons: {
+        icon: '/favicon.ico',
+        apple: '/favicon.ico', // Standard fallback
+    },
     title: {
-        default:
-            'K2 Auto Service | Premium Auto Repair & Car Sales Garden Grove',
-        template: '%s | K2 Auto Service',
+        default: 'K2 Auto Group | Premium Auto Repair & Car Sales Garden Grove',
+        template: '%s | K2 Auto Group',
     },
     description:
-        "Garden Grove's leading automotive center. K2 Auto Service offers certified auto repair, fast DMV registration, and a premium selection of new and used cars in Orange County.",
+        "Garden Grove's leading automotive center. K2 Auto Group offers certified auto repair, fast DMV registration, and a premium selection of new and used cars in Orange County.",
     keywords: [
+        'K2 Auto Group',
         'Auto Repair Garden Grove',
         'Car Sales Orange County',
         'DMV Services Garden Grove',
@@ -20,32 +24,33 @@ export const metadata: Metadata = {
         'Registration Renewal CA',
         'Title Transfer Services',
         'Certified Pre-Owned Cars',
+        'Car Leasing Garden Grove',
     ],
-    authors: [{ name: 'K2 Auto Service' }],
-    creator: 'K2 Auto Service',
+    authors: [{ name: 'K2 Auto Group' }],
+    creator: 'K2 Auto Group',
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://k2autoservice.com',
-        siteName: 'K2 Auto Service',
-        title: 'K2 Auto Service | Auto Repair & Car Sales in Garden Grove, CA',
+        url: 'https://k2motorgroup.com',
+        siteName: 'K2 Auto Group',
+        title: 'K2 Auto Group | Auto Repair & Car Sales in Garden Grove, CA',
         description:
             'Professional automotive solutions: Certified repairs, expedited DMV services, and premium car sales in Garden Grove.',
         images: [
             {
-                url: '/og-image.jpg', // Placeholder, user should provide
+                url: '/og-image.png',
                 width: 1200,
                 height: 630,
-                alt: 'K2 Auto Service - Garden Grove',
+                alt: 'K2 Auto Group - Garden Grove',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'K2 Auto Service | Auto Repair & Car Sales',
+        title: 'K2 Auto Group | Auto Repair & Car Sales',
         description:
             'Professional automotive solutions in Garden Grove. Repairs, DMV, and Sales.',
-        images: ['/og-image.jpg'],
+        images: ['/og-image.png'],
     },
     robots: {
         index: true,
@@ -59,7 +64,7 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: 'https://k2autoservice.com',
+        canonical: 'https://k2motorgroup.com',
     },
 };
 

@@ -4,8 +4,11 @@ import QuoteContent from "@/components/quote/QuoteContent";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get a Quote | K2 AUTO GROUP",
-  description: "Get an instant strategic appraisal and quote for your vehicle.",
+  title: "Get a Quote | Service & Appraisal Inquiry",
+  description: "Request a personalized quote for auto repair, car sales, or DMV services from the K2 Auto Group concierge team.",
+  alternates: {
+    canonical: 'https://k2motorgroup.com/quote',
+  },
 };
 
 export default function QuotePage() {

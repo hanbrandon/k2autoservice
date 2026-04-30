@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
+import { BUSINESS_INFO } from '@/utils/businessInfo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://k2autoservice.com';
+    const baseUrl = BUSINESS_INFO.siteUrl;
     const lastModified = new Date();
 
     return [
