@@ -24,7 +24,7 @@ const Footer = () => {
                         <h2 className="text-condensed text-4xl font-black text-[#ed1c24] tracking-tighter">
                             K2 AUTO GROUP
                         </h2>
-                        <p className="text-white/60 text-[11px] leading-relaxed font-medium uppercase tracking-widest max-w-sm">
+                        <p className="text-white/80 text-[11px] leading-relaxed font-medium uppercase tracking-widest max-w-sm">
                             Your trusted partner for certified automotive repair, 
                             expedited DMV registration, and a premium selection of 
                             quality vehicles in Orange County. Providing the gold 
@@ -34,7 +34,7 @@ const Footer = () => {
 
                     {/* Navigation Section */}
                     <div className="md:col-span-2 space-y-8">
-                        <span className="text-[9px] font-black tracking-[0.4em] text-white/40 uppercase">
+                        <span className="text-[9px] font-black tracking-[0.4em] text-white/60 uppercase">
                             Explore
                         </span>
                         <div className="flex flex-col gap-4 text-[11px] font-bold text-white/80">
@@ -49,7 +49,7 @@ const Footer = () => {
 
                     {/* Policy Section */}
                     <div className="md:col-span-2 space-y-8">
-                        <span className="text-[9px] font-black tracking-[0.4em] text-white/40 uppercase">
+                        <span className="text-[9px] font-black tracking-[0.4em] text-white/60 uppercase">
                             Legal
                         </span>
                         <div className="flex flex-col gap-4 text-[11px] font-bold text-white/80">
@@ -61,7 +61,7 @@ const Footer = () => {
 
                     {/* Contact & Social Section */}
                     <div className="md:col-span-4 space-y-8">
-                        <span className="text-[9px] font-black tracking-[0.4em] text-white/40 uppercase">
+                        <span className="text-[9px] font-black tracking-[0.4em] text-white/60 uppercase">
                             Contact & Follow
                         </span>
                         <div className="space-y-6">
@@ -69,19 +69,19 @@ const Footer = () => {
                                 <p className="hover:text-white transition-colors cursor-pointer mb-4">
                                     {BUSINESS_INFO.email}
                                 </p>
-                                <p className="text-white/40 text-[9px] mb-1">GENERAL INQUIRY</p>
+                                <p className="text-white/50 text-[9px] mb-1">GENERAL INQUIRY</p>
                                 <p className="mb-4">
                                     <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="hover:text-white transition-colors">
                                         {BUSINESS_INFO.phone}
                                     </a>
                                 </p>
-                                <p className="text-white/40 text-[9px] mb-1">REPAIR DEPT DIRECT</p>
+                                <p className="text-white/50 text-[9px] mb-1">REPAIR DEPT DIRECT</p>
                                 <p className="mb-4">
                                     <a href={`tel:${BUSINESS_INFO.repairPhoneRaw}`} className="hover:text-white transition-colors">
                                         {BUSINESS_INFO.repairPhone}
                                     </a>
                                 </p>
-                                <p className="text-white/40 text-[9px] mb-1">LOCATION</p>
+                                <p className="text-white/50 text-[9px] mb-1">LOCATION</p>
                                 <p>
                                     <a 
                                         href={BUSINESS_INFO.googleMapsUrl}
@@ -101,10 +101,11 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white/60 hover:text-[#ed1c24] transition-colors"
+                                    aria-label="Follow us on Instagram"
                                 >
                                     <HugeiconsIcon icon={InstagramIcon} size={20} />
                                 </a>
-                                <a href="#" className="text-white/60 hover:text-[#ed1c24] transition-colors">
+                                <a href="#" aria-label="Follow us on Threads" className="text-white/60 hover:text-[#ed1c24] transition-colors">
                                     <HugeiconsIcon icon={ThreadsIcon} size={20} />
                                 </a>
                             </div>
@@ -114,7 +115,7 @@ const Footer = () => {
 
                 {/* Disclaimer Section */}
                 <div className="pt-12 border-t border-white/5 space-y-6">
-                    <div className="text-[8px] text-white/30 leading-relaxed font-medium uppercase tracking-[0.15em] space-y-4">
+                    <div className="text-[8px] text-white/50 leading-relaxed font-medium uppercase tracking-[0.15em] space-y-4">
                         <p>
                             * DMV DISCLOSURE: K2 AUTO GROUP IS A PRIVATELY OWNED REGISTRATION SERVICE PROVIDER LICENSED BY THE CALIFORNIA DEPARTMENT OF MOTOR VEHICLES. WE ARE NOT A GOVERNMENT AGENCY. ALL THIRD PARTY BRANDS AND LOGOS ARE THE REGISTERED TRADEMARKS OF THEIR RESPECTED OWNERS. THIS WEBSITE IS NOT AFFILIATED WITH, ENDORSED BY, OR SPONSORED BY THE DMV OR ANY OTHER GOVERNMENT ENTITY.
                         </p>
@@ -132,14 +133,15 @@ const Footer = () => {
                     <div className="text-[10px] text-white/50 font-bold uppercase tracking-widest">
                         © 2026 K2 AUTO GROUP. ALL RIGHTS RESERVED.
                     </div>
-                    <div className="text-[10px] text-white/30 font-bold uppercase tracking-widest">
-                        Site Developed by <a href="https://gawoori.com" target="_blank" rel="noopener noreferrer" className="text-[#ed1c24] hover:text-white transition-colors">GAWOORI.COM</a>
+                    <div className="text-[10px] text-white/50 font-bold uppercase tracking-widest">
+                        Site Developed by <a href="https://gawoori.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ed1c24] transition-colors underline decoration-[#ed1c24] underline-offset-4">GAWOORI.COM</a>
                     </div>
                 </div>
 
                 {/* Back to Top - Sleek Fixed Square */}
                 <button
                     onClick={scrollToTop}
+                    aria-label="Scroll back to top"
                     className="fixed bottom-10 right-10 bg-[#ed1c24] text-white w-14 h-14 rounded-none z-50 hover:bg-black transition-all shadow-2xl group lg:flex hidden items-center justify-center overflow-hidden"
                 >
                     <div className="relative w-full h-full flex items-center justify-center">

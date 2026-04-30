@@ -185,10 +185,10 @@ const DMVContent = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
                                 >
-                                    <h4 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+                                    <h3 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] mb-4">
                                         {step.title}
-                                    </h4>
-                                    <p className="text-white/40 text-xs font-bold uppercase tracking-widest leading-relaxed">
+                                    </h3>
+                                    <p className="text-white/60 text-xs font-bold uppercase tracking-widest leading-relaxed">
                                         {step.desc}
                                     </p>
                                 </motion.div>

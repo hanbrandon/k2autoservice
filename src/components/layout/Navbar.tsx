@@ -126,8 +126,10 @@ const Navbar = () => {
                         GET A QUOTE
                     </Link>
                     <button
-                        className={`lg:hidden transition-colors text-black`}
+                        className={`lg:hidden transition-colors text-black p-2`}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                        aria-expanded={isMenuOpen}
                     >
                         {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -144,7 +146,8 @@ const Navbar = () => {
                     >
                         <button
                             onClick={() => setIsMenuOpen(false)}
-                            className="absolute top-10 right-10 text-black hover:text-[#ed1c24] transition-colors cursor-pointer"
+                            className="absolute top-10 right-10 text-black hover:text-[#ed1c24] transition-colors cursor-pointer p-2"
+                            aria-label="Close menu"
                         >
                             <X size={32} />
                         </button>

@@ -22,7 +22,7 @@ const RepairServices = () => {
                         <br />
                         Repair Center
                     </h2>
-                    <p className="text-white/50 text-sm md:text-base mb-12 font-medium leading-relaxed max-w-xl tracking-tight">
+                    <p className="text-white/70 text-sm md:text-base mb-12 font-medium leading-relaxed max-w-xl tracking-tight">
                         Our facility is equipped with factory-specific
                         diagnostic tools and staffed by technicians trained
                         directly by major manufacturers. We maintain the
@@ -40,7 +40,7 @@ const RepairServices = () => {
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="flex items-center gap-5 text-[10px] font-black tracking-[0.3em] uppercase text-white/70"
+                                className="flex items-center gap-5 text-[10px] font-black tracking-[0.3em] uppercase text-white/80"
                             >
                                 <div className="w-1.5 h-1.5 bg-[#ed1c24] rounded-full" />{' '}
                                 {item}
@@ -69,7 +69,7 @@ const RepairServices = () => {
                         <p className="text-condensed text-4xl font-black italic  uppercase">
                             10,000+
                         </p>
-                        <p className="text-[8px] font-black opacity-30 uppercase tracking-[0.4em] mt-3">
+                        <p className="text-[8px] font-black opacity-60 uppercase tracking-[0.4em] mt-3">
                             Vehicles Serviced Since 2024
                         </p>
                     </motion.div>

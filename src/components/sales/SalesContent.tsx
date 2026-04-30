@@ -100,7 +100,7 @@ const SalesContent = () => {
     };
 
     const labelStyles =
-        'text-[9px] font-black uppercase tracking-[0.3em] text-white/30 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
+        'text-[9px] font-black uppercase tracking-[0.3em] text-white/60 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
     const inputStyles =
         'w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight placeholder:text-white/5 text-white transition-all';
 
@@ -188,10 +188,10 @@ const SalesContent = () => {
                                     {step.step}
                                 </span>
                                 <div className="relative z-10 pt-4">
-                                    <h4 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+                                    <h3 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] mb-4">
                                         {step.title}
-                                    </h4>
-                                    <p className="text-white/40 text-xs font-bold uppercase tracking-widest leading-relaxed">
+                                    </h3>
+                                    <p className="text-white/60 text-xs font-bold uppercase tracking-widest leading-relaxed">
                                         {step.desc}
                                     </p>
                                 </div>

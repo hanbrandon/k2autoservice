@@ -73,11 +73,13 @@ const Location = () => {
                                     value={userLoc}
                                     onChange={(e) => setUserLoc(e.target.value)}
                                     placeholder="ENTER YOUR LOCATION"
-                                    className="bg-transparent text-xs uppercase placeholder:text-white/20 outline-none w-full font-bold tracking-wider"
+                                    aria-label="Enter your location for directions"
+                                    className="bg-transparent text-xs uppercase placeholder:text-white/40 outline-none w-full font-bold tracking-wider py-2"
                                 />
                                 <button
                                     type="submit"
-                                    className="hover:text-[#ed1c24] transition-colors"
+                                    className="hover:text-[#ed1c24] transition-colors p-2"
+                                    aria-label="Get directions"
                                 >
                                     <Navigation size={16} />
                                 </button>
@@ -134,7 +136,8 @@ const Location = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className="hover:text-[#ed1c24] transition-colors cursor-pointer"
+                                    className="hover:text-[#ed1c24] transition-colors cursor-pointer p-3"
+                                    aria-label="Get directions"
                                 >
                                     <Navigation size={18} />
                                 </button>

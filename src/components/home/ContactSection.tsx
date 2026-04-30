@@ -98,7 +98,7 @@ const ContactSection = () => {
     ] as const;
 
     const labelStyles =
-        'text-[9px] font-black uppercase tracking-[0.3em] text-white/30 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
+        'text-[9px] font-black uppercase tracking-[0.3em] text-white/50 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
     const inputStyles =
         'w-full bg-transparent pb-3 focus:outline-none font-bold text-lg md:text-xl uppercase tracking-tight placeholder:text-white/10 text-white transition-all';
     const selectStyles =

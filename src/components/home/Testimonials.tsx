@@ -90,10 +90,10 @@ const Testimonials = () => {
                                             />
                                         ))}
                                     </div>
-                                    <h4 className="text-condensed text-lg md:text-xl font-black  text-white uppercase">
+                                    <h3 className="text-condensed text-lg md:text-xl font-black  text-white uppercase">
                                         {rev.name}
-                                    </h4>
-                                    <p className="text-[7px] font-bold text-white/30 uppercase tracking-[0.4em] mt-1">
+                                    </h3>
+                                    <p className="text-[7px] font-bold text-white/60 uppercase tracking-[0.4em] mt-1">
                                         {rev.role}
                                     </p>
                                 </div>

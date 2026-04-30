@@ -100,7 +100,7 @@ const Hero = () => {
                         <br />
                         Trust in Every Mile
                     </h2>
-                    <p className="text-[10px] md:text-xs max-w-xl mb-16 font-medium tracking-[0.2em] leading-relaxed uppercase opacity-60">
+                    <p className="text-[10px] md:text-xs max-w-xl mb-16 font-medium tracking-[0.2em] leading-relaxed uppercase opacity-80">
                         Garden Grove's leading automotive center. From certified
                         auto repairs and DMV services to a premium selection of
                         new and used vehicles.
@@ -198,8 +198,9 @@ const Hero = () => {
                         ),
                     }}
                     className="absolute bottom-10 z-[60] flex flex-col items-center"
+                    aria-hidden="true"
                 >
-                    <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-black/40 mb-2">
+                    <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 mb-2">
                         Scroll
                     </span>
                     <ChevronDown

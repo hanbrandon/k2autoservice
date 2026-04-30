@@ -114,7 +114,7 @@ const Experience = () => {
                                 <div
                                     key={f.id}
                                     onClick={() => scrollToSegment(idx)}
-                                    className={`relative flex flex-col lg:flex-row justify-center lg:justify-between items-center py-4 lg:py-5 px-2 lg:px-6 transition-all duration-500 overflow-hidden cursor-pointer ${activeIndex === idx ? 'text-black' : 'text-white/30 hover:text-white'}`}
+                                    className={`relative flex flex-col lg:flex-row justify-center lg:justify-between items-center py-4 lg:py-5 px-2 lg:px-6 transition-all duration-500 overflow-hidden cursor-pointer ${activeIndex === idx ? 'text-black' : 'text-white/60 hover:text-white'}`}
                                 >
                                     {/* Background Fill for Active State */}
                                     {activeIndex === idx && (
@@ -235,7 +235,7 @@ const Experience = () => {
                                                                 ? 1
                                                                 : 0,
                                                     }}
-                                                    className="text-white/50 leading-relaxed font-medium text-sm md:text-base max-w-lg"
+                                                    className="text-white/70 leading-relaxed font-medium text-sm md:text-base max-w-lg"
                                                 >
                                                     {floorData[f.id].desc}
                                                 </motion.p>

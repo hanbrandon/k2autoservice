@@ -8,37 +8,37 @@ import { BUSINESS_INFO } from '@/utils/businessInfo';
 const localPhotos = [
     {
         id: 1,
-        url: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=800',
+        url: '/instagram/insta-1.png',
         size: 'large',
         tag: 'PAINT CORRECTION',
     },
     {
         id: 2,
-        url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800',
+        url: '/instagram/insta-2.png',
         size: 'small',
         tag: 'ENGINE TUNING',
     },
     {
         id: 3,
-        url: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=800',
+        url: '/instagram/insta-3.png',
         size: 'small',
         tag: 'DIAGNOSTICS',
     },
     {
         id: 4,
-        url: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800',
+        url: '/instagram/insta-4.png',
         size: 'small',
         tag: 'BODY WORK',
     },
     {
         id: 5,
-        url: 'https://images.unsplash.com/photo-1621359953202-02623244d217?auto=format&fit=crop&q=80&w=800',
+        url: '/instagram/insta-5.png',
         size: 'large',
         tag: 'DELIVERY',
     },
     {
         id: 6,
-        url: 'https://images.unsplash.com/photo-1603584173870-7f309f824231?auto=format&fit=crop&q=80&w=800',
+        url: '/instagram/insta-6.png',
         size: 'small',
         tag: 'WHEEL ALIGNMENT',
     },
@@ -53,9 +53,7 @@ const InstagramShowcase = () => {
             if (!feedId) return;
 
             try {
-                const response = await fetch(
-                    `https://behold.so/api/v2/feed/${feedId}`,
-                );
+                const response = await fetch(feedId);
                 if (response.ok) {
                     const data = await response.json();
                     if (Array.isArray(data) && data.length > 0) {
@@ -114,7 +112,8 @@ const InstagramShowcase = () => {
                     <a
                         href={`https://instagram.com/${BUSINESS_INFO.instagram}`}
                         target="_blank"
-                        className="group flex items-center gap-5 text-[9px] font-black tracking-[0.4em] uppercase text-black/20 hover:text-black transition-all border-b border-black/5 pb-2"
+                        className="group flex items-center gap-5 text-[9px] font-black tracking-[0.4em] uppercase text-black/60 hover:text-black transition-all border-b border-black/5 pb-2"
+                        aria-label={`Follow @${BUSINESS_INFO.instagram} on Instagram`}
                     >
                         Follow @{BUSINESS_INFO.instagram}
                         <ArrowUpRight
@@ -165,12 +164,13 @@ const InstagramShowcase = () => {
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 group-hover:opacity-100 transition-opacity">
+                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-60 group-hover:opacity-100 transition-opacity">
                                             View Operational Detail
                                         </span>
                                         <Maximize2
                                             size={16}
-                                            className="text-black/20 group-hover:text-black transition-colors"
+                                            className="text-black/60 group-hover:text-black transition-colors"
+                                            aria-hidden="true"
                                         />
                                     </div>
                                 </div>

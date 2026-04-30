@@ -106,7 +106,7 @@ const RepairContent = () => {
     };
 
     const labelStyles =
-        'text-[9px] font-black uppercase tracking-[0.3em] text-white/30 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
+        'text-[9px] font-black uppercase tracking-[0.3em] text-white/60 group-focus-within:text-[#ed1c24] transition-colors mb-2 block';
     const inputStyles =
         'w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight placeholder:text-white/5 text-white transition-all';
 
@@ -197,14 +197,14 @@ const RepairContent = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                         {technicalDetails.map((tech) => (
                             <div key={tech.category}>
-                                <h4 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] mb-8 border-b border-[#ed1c24]/30 pb-4">
+                                <h3 className="text-[#ed1c24] text-[10px] font-black uppercase tracking-[0.3em] mb-8 border-b border-[#ed1c24]/30 pb-4">
                                     {tech.category}
-                                </h4>
+                                </h3>
                                 <ul className="space-y-4">
                                     {tech.items.map((item) => (
                                         <li
                                             key={item}
-                                            className="flex items-center gap-4 text-white/40 text-xs font-bold uppercase tracking-widest"
+                                            className="flex items-center gap-4 text-white/60 text-xs font-bold uppercase tracking-widest"
                                         >
                                             <div className="w-1 h-1 bg-[#ed1c24] rounded-full" />
                                             {item}
