@@ -202,8 +202,10 @@ const ContactSection = () => {
                                         <div className="text-[9px] font-black uppercase tracking-[0.3em] text-white/50 mb-1">
                                             Business Hours
                                         </div>
-                                        <div className="text-xl font-bold">
-                                            MON - FRI: 8AM - 6PM
+                                        <div className="text-sm font-bold leading-tight">
+                                            REPAIR: 8AM - 5PM (SAT 8-12)
+                                            <br />
+                                            GENERAL: 10AM - 6PM
                                         </div>
                                     </div>
                                 </div>
@@ -560,8 +562,8 @@ const ContactSection = () => {
                                                         name="repair_type"
                                                         className={selectStyles}
                                                     >
-                                                        <option value="collision">
-                                                            COLLISION REPAIR
+                                                        <option value="brakes">
+                                                            EXPERT BRAKE SERVICE
                                                         </option>
                                                         <option value="maintenance">
                                                             ROUTINE MAINTENANCE

@@ -19,14 +19,14 @@ import { useState } from 'react';
 
 const mainServices = [
     {
-        title: 'Collision Repair',
-        desc: 'Utilizing advanced frame alignment systems to restore your vehicle to factory safety standards after an accident.',
-        icon: <ShieldCheck className="text-[#ed1c24]" />,
+        title: 'Performance Tuning',
+        desc: 'Optimizing engine software and hardware to unlock your vehicle’s full potential while maintaining reliability.',
+        icon: <Zap className="text-[#ed1c24]" />,
     },
     {
-        title: 'Expert Paint Service',
-        desc: 'Computerized color matching ensures a perfect finish, matching your original factory paint perfectly every time.',
-        icon: <PenTool className="text-[#ed1c24]" />,
+        title: 'Wheel & Tire Service',
+        desc: 'Precision mounting, balancing, and alignment using specialized equipment for luxury and performance alloys.',
+        icon: <Settings className="text-[#ed1c24]" />,
     },
     {
         title: 'Computer Diagnostics',
@@ -44,10 +44,10 @@ const technicalDetails = [
     {
         category: 'Chassis & Suspension',
         items: [
-            '3D Laser Frame Measuring',
+            'Precision Wheel Alignment',
             'Adaptive Suspension Calibration',
-            'Dynamic Wheel Alignment',
-            'Brake System Hydraulics',
+            'Performance Brake Hydraulics',
+            'Chassis Reinforcement',
         ],
     },
     {
@@ -62,10 +62,10 @@ const technicalDetails = [
     {
         category: 'Refinement & Finish',
         items: [
-            'Aluminum Panel Repair',
-            'Carbon Fiber Component Care',
-            'Ceramic Clearcoat Application',
-            'High-Speed Buffing & Polishing',
+            'Advanced Detailing',
+            'Ceramic Coating Application',
+            'Leather & Interior Care',
+            'Paint Protection Film (PPF)',
         ],
     },
 ];
@@ -325,10 +325,10 @@ const RepairContent = () => {
                                         </label>
                                         <select
                                             required
-                                            className="w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight text-white appearance-none cursor-pointer"
+                                            className="w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight text-white appearance-none cursor-pointer [&_option]:bg-black [&_option]:text-white"
                                         >
-                                            <option value="collision">
-                                                COLLISION RESTORATION
+                                            <option value="tuning">
+                                                PERFORMANCE TUNING
                                             </option>
                                             <option value="maintenance">
                                                 ROUTINE MAINTENANCE
@@ -336,8 +336,8 @@ const RepairContent = () => {
                                             <option value="diagnostic">
                                                 DIAGNOSTIC ANALYSIS
                                             </option>
-                                            <option value="tuning">
-                                                PERFORMANCE TUNING
+                                            <option value="alignment">
+                                                WHEEL ALIGNMENT
                                             </option>
                                         </select>
                                         <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />

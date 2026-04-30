@@ -53,9 +53,8 @@ const TermsOfUse = () => {
                             <p>
                                 K2 Auto Group provides a comprehensive range of
                                 automotive solutions, including but not limited to
-                                mechanical repair, collision restoration, vehicle
-                                sales and acquisition, executive rentals, and DMV
-                                concierge services.
+                                mechanical repair, vehicle sales and acquisition,
+                                executive rentals, and DMV concierge services.
                             </p>
                         </section>
 

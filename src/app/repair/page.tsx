@@ -4,15 +4,15 @@ import RepairContent from '@/components/repair/RepairContent';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Certified Auto Repair & Collision Center',
+    title: 'Certified Auto Repair & Precision Maintenance',
     description:
-        'K2 Auto Group offers certified auto repair, expert collision restoration, and computerized diagnostics in Garden Grove. Trusted technicians for luxury and performance vehicles.',
+        'K2 Auto Group offers certified auto repair, performance tuning, and computerized diagnostics in Garden Grove. Trusted technicians for luxury and performance vehicles.',
     alternates: {
         canonical: 'https://k2motorgroup.com/repair',
     },
     openGraph: {
-        title: 'Auto Repair & Collision Center | K2 Auto Group',
-        description: 'Certified auto repair and expert collision restoration in Garden Grove.',
+        title: 'Auto Repair & Precision Maintenance | K2 Auto Group',
+        description: 'Certified auto repair and performance tuning in Garden Grove.',
         url: 'https://k2motorgroup.com/repair',
         type: 'article',
     }

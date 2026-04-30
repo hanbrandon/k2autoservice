@@ -293,7 +293,7 @@ const RentalContent = () => {
                                     </label>
                                     <select
                                         required
-                                        className="w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight text-white appearance-none cursor-pointer"
+                                        className="w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight text-white appearance-none cursor-pointer [&_option]:bg-black [&_option]:text-white"
                                     >
                                         <option value="sedan">
                                             EXECUTIVE SEDAN

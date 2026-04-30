@@ -295,7 +295,7 @@ const QuoteContent = () => {
                                             <label htmlFor="repair_type" className={labelStyles}>Service Needed</label>
                                             <div className="relative">
                                                 <select id="repair_type" name="repair_type" className={selectStyles}>
-                                                    <option value="collision">COLLISION REPAIR</option>
+                                                    <option value="brakes">EXPERT BRAKE SERVICE</option>
                                                     <option value="maintenance">ROUTINE MAINTENANCE</option>
                                                     <option value="diagnostic">DIAGNOSTIC / REPAIR</option>
                                                     <option value="detailing">ELITE DETAILING</option>

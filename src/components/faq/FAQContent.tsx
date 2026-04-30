@@ -19,15 +19,15 @@ const faqs = [
         ],
     },
     {
-        category: 'Repair & Claims',
+        category: 'Maintenance & Service',
         questions: [
             {
-                q: 'How does the insurance claims process work at K2?',
-                a: 'We act as your professional advocate. Once you provide your claim number, our team coordinates directly with the insurance adjuster, handles all photo documentation, and ensures that OEM parts are approved for the repair, rather than inferior aftermarket alternatives.',
+                q: 'What types of maintenance do you perform?',
+                a: 'K2 Auto Group covers all aspects of mechanical maintenance, including advanced electronic diagnostics, performance tuning, suspension calibration, brake system optimization, and routine factory-scheduled services.',
             },
             {
-                q: 'Do you offer a warranty on repairs?',
-                a: "All collision repairs performed at K2 Auto Group come with a limited lifetime warranty on workmanship and a manufacturer's warranty on all genuine parts used.",
+                q: 'Do you offer a warranty on your services?',
+                a: "All mechanical services performed at K2 Auto Group come with a 12-month/12,000-mile limited warranty on workmanship, in addition to any manufacturer's warranty on the genuine OEM parts used.",
             },
         ],
     },
@@ -35,8 +35,8 @@ const faqs = [
         category: 'Acquisition & Leasing',
         questions: [
             {
-                q: 'Can you help international professionals (Expats) get a car?',
-                a: 'Absolutely. Our Expat Program is specifically designed for international professionals moving to the US. We provide assistance with credit building, localized registration, and securing financing without a pre-existing US credit history.',
+                q: 'Can I trade in my current vehicle?',
+                a: 'Yes, we accept trade-ins for all makes and models. Our team will provide a professional market valuation, and the equity can be applied directly toward your new lease or purchase.',
             },
         ],
     },

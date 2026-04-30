@@ -6,7 +6,6 @@ import {
     ShoppingBag,
     ArrowRight,
     DollarSign,
-    Globe,
     Verified,
     TrendingUp,
     Handshake,
@@ -25,19 +24,19 @@ const mainCapabilities = [
         icon: <Car className="text-[#ed1c24]" />,
     },
     {
-        title: 'Certified Pre-Owned',
-        desc: 'Our hand-picked pre-owned inventory features low-mileage vehicles with clean service histories, all passing our rigorous multi-point inspection.',
+        title: 'Used Car Sales',
+        desc: 'Our hand-picked inventory features high-quality vehicles with clean service histories, all passing our rigorous safety and performance inspection.',
         icon: <Verified className="text-[#ed1c24]" />,
     },
     {
         title: 'Auto Financing',
-        desc: 'Work with our network of lenders to secure great interest rates and flexible terms that fit your budget and credit needs.',
+        desc: 'Work with our network of lenders to secure competitive interest rates and flexible terms that fit your budget and credit needs.',
         icon: <TrendingUp className="text-[#ed1c24]" />,
     },
     {
-        title: 'International Buyer Program',
-        desc: 'Expert assistance for international professionals and expats, including credit-building advice and vehicle registration support.',
-        icon: <Globe className="text-[#ed1c24]" />,
+        title: 'Trade-in Service',
+        desc: 'Receive a fair market valuation for your current vehicle and apply it directly toward your next purchase or lease.',
+        icon: <Handshake className="text-[#ed1c24]" />,
     },
 ];
 
@@ -296,19 +295,19 @@ const SalesContent = () => {
                                         </label>
                                         <select
                                             required
-                                            className="w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight text-white appearance-none cursor-pointer"
+                                            className="w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight text-white appearance-none cursor-pointer [&_option]:bg-black [&_option]:text-white"
                                         >
                                             <option value="new_lease">
                                                 NEW CAR LEASE
                                             </option>
                                             <option value="used_purchase">
-                                                CPO PURCHASE
-                                            </option>
-                                            <option value="expat">
-                                                EXPAT PROGRAM
+                                                USED CAR PURCHASE
                                             </option>
                                             <option value="financing">
-                                                STRATEGIC FINANCING
+                                                AUTO FINANCING
+                                            </option>
+                                            <option value="trade_in">
+                                                TRADE-IN INQUIRY
                                             </option>
                                         </select>
                                         <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />

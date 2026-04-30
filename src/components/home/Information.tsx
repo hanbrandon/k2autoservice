@@ -8,8 +8,8 @@ const items = [
         title: 'SERVICE HOURS',
         desc: 'Maintenance & Repairs',
         details: [
-            'Mon ~ Fri: 08:00 AM - 06:00 PM',
-            'Sat: 08:00 AM - 02:00 PM',
+            'Mon ~ Fri: 08:00 AM - 05:00 PM',
+            'Sat: 08:00 AM - 12:00 PM',
             'Sun: Closed',
         ],
         icon: (
@@ -23,8 +23,8 @@ const items = [
         title: 'SALES CENTER',
         desc: 'Showroom Hours',
         details: [
-            'Mon ~ Fri: 08:00 AM - 06:00 PM',
-            'Sat: 08:00 AM - 02:00 PM',
+            'Mon ~ Fri: 10:00 AM - 06:00 PM',
+            'Sat: Closed',
             'Sun: Closed',
         ],
         icon: (
@@ -38,8 +38,8 @@ const items = [
         title: 'DMV SERVICES',
         desc: 'Express Processing',
         details: [
-            'Mon ~ Fri: 08:00 AM - 06:00 PM',
-            'Sat: 08:00 AM - 02:00 PM',
+            'Mon ~ Fri: 10:00 AM - 06:00 PM',
+            'Sat: Closed',
             'Sun: Closed',
         ],
         icon: (

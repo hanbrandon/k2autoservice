@@ -39,22 +39,22 @@ const mainAreas = [
     },
 ];
 
-const collisionProcess = [
+const valuationProcess = [
     {
-        title: 'On-Site Triage',
-        desc: 'Immediate assessment of safety and driveability post-accident.',
+        title: 'Market Value Analysis',
+        desc: 'Comprehensive real-time market data to determine the optimal value for your vehicle.',
     },
     {
-        title: 'Evidence Capture',
-        desc: 'Detailed photo documentation and reporting for insurance adjusters.',
+        title: 'History Report Audit',
+        desc: 'Detailed review of CARFAX and service history to identify value-impacting factors.',
     },
     {
-        title: 'Direct Billing',
-        desc: 'Direct communication with providers like State Farm, Geico, and AIG.',
+        title: 'Lease-End Consulting',
+        desc: 'Professional guidance on lease buyouts and return documentation to avoid hidden fees.',
     },
     {
-        title: 'OEM Advocacy',
-        desc: 'We insist on genuine parts over aftermarket alternatives for all repairs.',
+        title: 'Tax & Credit Verification',
+        desc: 'Ensuring you receive all eligible state tax credits and exemptions during transfers.',
     },
 ];
 
@@ -107,7 +107,7 @@ const DMVContent = () => {
                         animate={{ opacity: 1, x: 0 }}
                         className="text-[#ed1c24] text-[10px] font-black tracking-[0.5em] uppercase mb-8 block"
                     >
-                        Administrative & Claims Support
+                        Administrative & Valuation Support
                     </motion.span>
                     <h1 className="text-condensed text-5xl md:text-8xl font-black  leading-[0.9] uppercase mb-16">
                         DMV &<br />
@@ -119,7 +119,7 @@ const DMVContent = () => {
                             with the Bureau of Automotive Repair and the DMV.
                             Our objective is to eliminate the friction of
                             vehicle ownership through expert documentation
-                            management and aggressive insurance coordination.
+                            management and strategic valuation consulting.
                         </p>
                         <div className="flex flex-col gap-6">
                             <div className="flex gap-4 items-center border-b border-black/5 pb-4">
@@ -171,12 +171,12 @@ const DMVContent = () => {
                     </div>
                     <div className="relative z-10">
                         <h2 className="text-condensed text-4xl md:text-5xl font-black uppercase  mb-16">
-                            Collision Claim
+                            Valuation &
                             <br />
-                            Management
+                            Appraisal
                         </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-                            {collisionProcess.map((step, idx) => (
+                            {valuationProcess.map((step, idx) => (
                                 <motion.div
                                     key={step.title}
                                     className="border-l border-[#ed1c24]/30 pl-6"
@@ -206,8 +206,8 @@ const DMVContent = () => {
                             Request
                         </h2>
                         <p className="text-white/60 mb-12 text-sm font-medium leading-relaxed">
-                            Need expedited DMV processing or insurance
-                            coordination? Submit your request below for a
+                            Need expedited DMV processing or vehicle
+                            valuation? Submit your request below for a
                             priority review.
                         </p>
                         <div className="space-y-6 opacity-30">
@@ -293,13 +293,13 @@ const DMVContent = () => {
                                         </label>
                                         <select
                                             required
-                                            className="w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight text-white appearance-none cursor-pointer"
+                                            className="w-full bg-transparent pb-3 focus:outline-none font-bold text-lg uppercase tracking-tight text-white appearance-none cursor-pointer [&_option]:bg-black [&_option]:text-white"
                                         >
                                             <option value="dmv">
                                                 DMV PROCESSING
                                             </option>
-                                            <option value="claims">
-                                                INSURANCE CLAIMS
+                                            <option value="valuation">
+                                                VEHICLE VALUATION
                                             </option>
                                             <option value="title">
                                                 TITLE / LIEN SERVICES
@@ -355,10 +355,9 @@ const DMVContent = () => {
 
                 <footer className="mt-32 pt-16 border-t border-black/5">
                     <p className="text-black/30 text-[9px] font-black uppercase tracking-[0.4em] leading-loose max-w-4xl">
-                        K2 Auto Group is not an insurance provider. Our claims
-                        assistance is a concierge service to support the repair
-                        process. DMV services are subject to state fees and
-                        documentation availability.
+                        K2 Auto Group provides professional administrative
+                        and valuation support. DMV services are subject to
+                        state fees and documentation availability.
                     </p>
                 </footer>
             </div>

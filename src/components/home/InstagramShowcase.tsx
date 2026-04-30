@@ -10,7 +10,7 @@ const localPhotos = [
         id: 1,
         url: '/instagram/insta-1.png',
         size: 'large',
-        tag: 'PAINT CORRECTION',
+        tag: 'CERAMIC COATING',
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const localPhotos = [
         id: 4,
         url: '/instagram/insta-8.png',
         size: 'small',
-        tag: 'BODY WORK',
+        tag: 'EXPERT SERVICE',
     },
     {
         id: 5,

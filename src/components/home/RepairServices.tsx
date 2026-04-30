@@ -33,7 +33,7 @@ const RepairServices = () => {
                         {[
                             'ADVANCED ELECTRONIC DIAGNOSTICS',
                             'PERFORMANCE TUNING & SUSPENSION',
-                            'CERTIFIED COLLISION REPAIR',
+                            'PRECISION WHEEL ALIGNMENT',
                         ].map((item, idx) => (
                             <motion.li
                                 key={item}
