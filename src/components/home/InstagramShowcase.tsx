@@ -20,13 +20,13 @@ const localPhotos = [
     },
     {
         id: 3,
-        url: '/instagram/insta-3.png',
+        url: '/instagram/insta-7.png',
         size: 'small',
         tag: 'DIAGNOSTICS',
     },
     {
         id: 4,
-        url: '/instagram/insta-4.png',
+        url: '/instagram/insta-8.png',
         size: 'small',
         tag: 'BODY WORK',
     },
@@ -155,6 +155,7 @@ const InstagramShowcase = () => {
 
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-700" />
 
+                            {/* 
                             <div className="absolute inset-0 flex flex-col justify-end p-8">
                                 <div className="flex flex-col gap-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                     <div className="flex items-center gap-3">
@@ -175,6 +176,7 @@ const InstagramShowcase = () => {
                                     </div>
                                 </div>
                             </div>
+                            */}
                         </motion.div>
                     ))}
                 </div>
