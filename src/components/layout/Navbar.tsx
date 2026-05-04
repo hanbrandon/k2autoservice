@@ -19,6 +19,7 @@ const navItems: NavItem[] = [
     { name: 'Sales', type: 'page', path: '/sales' },
     { name: 'Rental', type: 'page', path: '/rental' },
     { name: 'DMV', type: 'page', path: '/dmv' },
+    { name: 'Pre-Approve', type: 'page', path: '/pre-approve' },
     { name: 'FAQ', type: 'page', path: '/faq' },
     { name: 'Contact', type: 'anchor', target: 'contact' },
 ];
@@ -42,7 +43,9 @@ const Navbar = () => {
                     ? 'Sales'
                     : pathname === '/rental'
                       ? 'Rental'
-                      : '';
+                      : pathname === '/pre-approve'
+                        ? 'Pre-Approve'
+                        : '';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -106,7 +109,7 @@ const Navbar = () => {
                                         e.preventDefault();
                                         handleNavClick(item);
                                     }}
-                                    className={`relative h-full flex items-center px-4 text-base font-light transition-all duration-300 group ${isActive ? 'text-[#ed1c24]' : 'text-black hover:text-[#ed1c24]'}`}
+                                    className={`relative h-full flex items-center px-4 text-base font-light transition-all duration-300 group cursor-pointer ${isActive ? 'text-[#ed1c24]' : 'text-black hover:text-[#ed1c24]'}`}
                                 >
                                     <span
                                         className={`absolute top-0 left-0 right-0 h-1 bg-[#ed1c24] transition-all duration-300 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
@@ -121,12 +124,12 @@ const Navbar = () => {
                 <div className="flex items-center gap-6">
                     <Link
                         href="/quote"
-                        className={`hidden sm:block border border-black px-6 py-2 text-sm font-bold transition-all text-black hover:bg-black hover:text-white`}
+                        className={`hidden sm:block border border-black px-6 py-2 text-sm font-bold transition-all text-black hover:bg-black hover:text-white cursor-pointer`}
                     >
                         GET A QUOTE
                     </Link>
                     <button
-                        className={`lg:hidden transition-colors text-black p-2`}
+                        className={`lg:hidden transition-colors text-black p-2 cursor-pointer`}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         aria-expanded={isMenuOpen}
@@ -164,7 +167,7 @@ const Navbar = () => {
                                         e.preventDefault();
                                         handleNavClick(item);
                                     }}
-                                    className={`transition-all ${activeTab === item.name ? 'text-[#ed1c24]' : 'hover:pl-4 text-black'}`}
+                                    className={`transition-all cursor-pointer ${activeTab === item.name ? 'text-[#ed1c24]' : 'hover:pl-4 text-black'}`}
                                 >
                                     {item.name.toUpperCase()}
                                 </a>

@@ -41,3 +41,16 @@ Premium automotive landing page built with Next.js and Tailwind CSS.
     ```bash
     pnpm run build
     ```
+
+### Testing
+
+1. Install testing tools (first time only):
+    ```bash
+    pnpm add -D @playwright/test
+    npx playwright install chromium
+    ```
+
+2. Run the automated tests (ensure the server is running):
+    ```bash
+    npx playwright test
+    ```
