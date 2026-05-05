@@ -19,7 +19,6 @@ const navItems: NavItem[] = [
     { name: 'Sales', type: 'page', path: '/sales' },
     { name: 'Rental', type: 'page', path: '/rental' },
     { name: 'DMV', type: 'page', path: '/dmv' },
-    { name: 'Pre-Approve', type: 'page', path: '/pre-approve' },
     { name: 'FAQ', type: 'page', path: '/faq' },
     { name: 'Contact', type: 'anchor', target: 'contact' },
 ];
