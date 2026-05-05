@@ -379,7 +379,7 @@ const PreApproveForm = () => {
         };
 
         try {
-            const response = await fetch('/api/pre-approve', {
+            const response = await fetch('/api/credit-application', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
@@ -412,7 +412,7 @@ const PreApproveForm = () => {
                 </div>
                 <h2 className="text-4xl font-black uppercase mb-4">Application Received</h2>
                 <p className="text-white/60 mb-8">Thank you for submitting your pre-approval application. Our team will review your information and get back to you shortly.</p>
-                <button 
+                <button suppressHydrationWarning 
                     onClick={() => window.location.href = '/'}
                     className="bg-[#ed1c24] text-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-[#c4161b] transition-colors cursor-pointer"
                 >
@@ -453,7 +453,7 @@ const PreApproveForm = () => {
                                 <label className={cn(labelStyles, step1Errors.firstName && "text-[#ed1c24]")} htmlFor="firstName">
                                     First Name {step1Errors.firstName && <span className="ml-1">*</span>}
                                 </label>
-                                <input 
+                                <input suppressHydrationWarning 
                                     type="text" id="firstName" value={step1Data.firstName} 
                                     onChange={handleStep1Change} className={cn(inputStyles, step1Errors.firstName && "border-[#ed1c24]/50")} placeholder="JOHN" required 
                                 />
@@ -465,7 +465,7 @@ const PreApproveForm = () => {
                                 <label className={cn(labelStyles, step1Errors.lastName && "text-[#ed1c24]")} htmlFor="lastName">
                                     Last Name {step1Errors.lastName && <span className="ml-1">*</span>}
                                 </label>
-                                <input 
+                                <input suppressHydrationWarning 
                                     type="text" id="lastName" value={step1Data.lastName} 
                                     onChange={handleStep1Change} className={cn(inputStyles, step1Errors.lastName && "border-[#ed1c24]/50")} placeholder="DOE" required 
                                 />
@@ -478,7 +478,7 @@ const PreApproveForm = () => {
                             <label className={cn(labelStyles, step1Errors.email && "text-[#ed1c24]")} htmlFor="email">
                                 Email Address {step1Errors.email && <span className="ml-1">(INVALID)</span>}
                             </label>
-                            <input 
+                            <input suppressHydrationWarning 
                                 type="email" id="email" value={step1Data.email} 
                                 onChange={handleStep1Change} className={cn(inputStyles, step1Errors.email && "border-[#ed1c24]/50")} placeholder="EMAIL@EXAMPLE.COM" required 
                             />
@@ -491,7 +491,7 @@ const PreApproveForm = () => {
                                 <label className={cn(labelStyles, step1Errors.phone && "text-[#ed1c24]")} htmlFor="phone">
                                     Phone Number {step1Errors.phone && <span className="ml-1">(10 DIGITS)</span>}
                                 </label>
-                                <input 
+                                <input suppressHydrationWarning 
                                     type="tel" id="phone" value={step1Data.phone} 
                                     onChange={handleStep1Change} className={cn(inputStyles, step1Errors.phone && "border-[#ed1c24]/50")} placeholder="(000) 000-0000" required 
                                 />
@@ -503,7 +503,7 @@ const PreApproveForm = () => {
                                 <label className={cn(labelStyles, step1Errors.zipCode && "text-[#ed1c24]")} htmlFor="zipCode">
                                     Zip Code {step1Errors.zipCode && <span className="ml-1">(5 DIGITS)</span>}
                                 </label>
-                                <input 
+                                <input suppressHydrationWarning 
                                     type="text" id="zipCode" value={step1Data.zipCode} 
                                     onChange={handleStep1Change} className={cn(inputStyles, step1Errors.zipCode && "border-[#ed1c24]/50")} placeholder="90001" required 
                                 />
@@ -514,7 +514,7 @@ const PreApproveForm = () => {
                         </div>
 
                         <div className="pt-8">
-                            <button 
+                            <button suppressHydrationWarning 
                                 onClick={nextStep}
                                 className="w-full bg-[#ed1c24] text-white py-5 font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-[#c4161b] transition-all cursor-pointer"
                             >
@@ -569,15 +569,15 @@ const PreApproveForm = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                                         <div>
                                             <label className={labelStyles}>First Name</label>
-                                            <input type="text" className={inputStyles} value={step1Data.firstName} disabled />
+                                            <input suppressHydrationWarning type="text" className={inputStyles} value={step1Data.firstName} disabled />
                                         </div>
                                         <div>
                                             <label className={labelStyles}>Last Name</label>
-                                            <input type="text" className={inputStyles} value={step1Data.lastName} disabled />
+                                            <input suppressHydrationWarning type="text" className={inputStyles} value={step1Data.lastName} disabled />
                                         </div>
                                         <div>
                                             <label className={labelStyles} htmlFor="middleName">Middle Name</label>
-                                            <input type="text" id="middleName" className={inputStyles} value={personalData.middleName} onChange={handlePersonalChange} />
+                                            <input suppressHydrationWarning type="text" id="middleName" className={inputStyles} value={personalData.middleName} onChange={handlePersonalChange} />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -585,13 +585,13 @@ const PreApproveForm = () => {
                                             <label className={cn(labelStyles, personalErrors.dob && "text-[#ed1c24]")} htmlFor="dob">
                                                 Date of Birth (MM-DD-YYYY) {personalErrors.dob && <span className="ml-1">*</span>}
                                             </label>
-                                            <input type="text" id="dob" className={cn(inputStyles, personalErrors.dob && "border-[#ed1c24]/50")} placeholder="01-01-1990" value={personalData.dob} onChange={handlePersonalChange} required />
+                                            <input suppressHydrationWarning type="text" id="dob" className={cn(inputStyles, personalErrors.dob && "border-[#ed1c24]/50")} placeholder="01-01-1990" value={personalData.dob} onChange={handlePersonalChange} required />
                                         </div>
                                         <div>
                                             <label className={cn(labelStyles, personalErrors.ssn && "text-[#ed1c24]")} htmlFor="ssn">
                                                 SSN or ITIN {personalErrors.ssn && <span className="ml-1">(INVALID)</span>}
                                             </label>
-                                            <input type="text" id="ssn" className={cn(inputStyles, personalErrors.ssn && "border-[#ed1c24]/50")} placeholder="XXX-XX-XXXX" value={personalData.ssn} onChange={handlePersonalChange} required />
+                                            <input suppressHydrationWarning type="text" id="ssn" className={cn(inputStyles, personalErrors.ssn && "border-[#ed1c24]/50")} placeholder="XXX-XX-XXXX" value={personalData.ssn} onChange={handlePersonalChange} required />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -599,13 +599,13 @@ const PreApproveForm = () => {
                                             <label className={cn(labelStyles, personalErrors.driversLicense && "text-[#ed1c24]")} htmlFor="driversLicense">
                                                 Driver's License No. {personalErrors.driversLicense && <span className="ml-1">*</span>}
                                             </label>
-                                            <input type="text" id="driversLicense" className={cn(inputStyles, personalErrors.driversLicense && "border-[#ed1c24]/50")} value={personalData.driversLicense} onChange={handlePersonalChange} required />
+                                            <input suppressHydrationWarning type="text" id="driversLicense" className={cn(inputStyles, personalErrors.driversLicense && "border-[#ed1c24]/50")} value={personalData.driversLicense} onChange={handlePersonalChange} required />
                                         </div>
                                         <div>
                                             <label className={cn(labelStyles, personalErrors.dlState && "text-[#ed1c24]")} htmlFor="dlState">
                                                 DL Issuing State {personalErrors.dlState && <span className="ml-1">*</span>}
                                             </label>
-                                            <select id="dlState" className={cn(selectStyles, personalErrors.dlState && "border-[#ed1c24]/50")} value={personalData.dlState} onChange={handlePersonalChange} required>
+                                            <select suppressHydrationWarning id="dlState" className={cn(selectStyles, personalErrors.dlState && "border-[#ed1c24]/50")} value={personalData.dlState} onChange={handlePersonalChange} required>
                                                 <option value="">SELECT STATE</option>
                                                 {US_STATES.map(state => (
                                                     <option key={state.code} value={state.code}>{state.name}</option>
@@ -616,17 +616,17 @@ const PreApproveForm = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                         <div>
                                             <label className={labelStyles}>Email</label>
-                                            <input type="email" className={inputStyles} value={step1Data.email} disabled />
+                                            <input suppressHydrationWarning type="email" className={inputStyles} value={step1Data.email} disabled />
                                         </div>
                                         <div>
                                             <label className={labelStyles} htmlFor="homePhone">Home Phone</label>
-                                            <input type="tel" id="homePhone" className={inputStyles} value={personalData.homePhone} onChange={handlePersonalChange} />
+                                            <input suppressHydrationWarning type="tel" id="homePhone" className={inputStyles} value={personalData.homePhone} onChange={handlePersonalChange} />
                                         </div>
                                         <div>
                                             <label className={cn(labelStyles, personalErrors.employmentStatus && "text-[#ed1c24]")} htmlFor="employmentStatus">
                                                 Employment Status {personalErrors.employmentStatus && <span className="ml-1">*</span>}
                                             </label>
-                                            <select id="employmentStatus" className={cn(selectStyles, personalErrors.employmentStatus && "border-[#ed1c24]/50")} value={personalData.employmentStatus} onChange={handlePersonalChange} required>
+                                            <select suppressHydrationWarning id="employmentStatus" className={cn(selectStyles, personalErrors.employmentStatus && "border-[#ed1c24]/50")} value={personalData.employmentStatus} onChange={handlePersonalChange} required>
                                                 <option value="">CHOOSE STATUS</option>
                                                 <option value="employed">EMPLOYED</option>
                                                 <option value="self-employed">SELF-EMPLOYED</option>
@@ -643,42 +643,42 @@ const PreApproveForm = () => {
                                     {residenceHistory.map((res, index) => (
                                         <div key={index} className="p-6 bg-white/2 border border-white/5 mb-6 relative">
                                             {index > 0 && (
-                                                <button type="button" onClick={() => removeResidence(index)} className="absolute top-4 right-4 text-white/30 hover:text-[#ed1c24] transition-colors cursor-pointer">
+                                                <button suppressHydrationWarning type="button" onClick={() => removeResidence(index)} className="absolute top-4 right-4 text-white/30 hover:text-[#ed1c24] transition-colors cursor-pointer">
                                                     <Trash2 size={16} />
                                                 </button>
                                             )}
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                                 <div className="md:col-span-2">
                                                     <label className={labelStyles}>Street Address</label>
-                                                    <input type="text" id={`res-address-${index}`} className={inputStyles} value={res.address} onChange={(e) => handleResidenceChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="text" id={`res-address-${index}`} className={inputStyles} value={res.address} onChange={(e) => handleResidenceChange(index, e)} required />
                                                 </div>
                                                 <div>
                                                     <label className={labelStyles}>City</label>
-                                                    <input type="text" id={`res-city-${index}`} className={inputStyles} value={res.city} onChange={(e) => handleResidenceChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="text" id={`res-city-${index}`} className={inputStyles} value={res.city} onChange={(e) => handleResidenceChange(index, e)} required />
                                                 </div>
                                                 <div className="grid grid-cols-2 gap-4">
                                                     <div>
                                                         <label className={labelStyles}>State</label>
-                                                        <input type="text" id={`res-state-${index}`} className={inputStyles} value={res.state} onChange={(e) => handleResidenceChange(index, e)} required />
+                                                        <input suppressHydrationWarning type="text" id={`res-state-${index}`} className={inputStyles} value={res.state} onChange={(e) => handleResidenceChange(index, e)} required />
                                                     </div>
                                                     <div>
                                                         <label className={labelStyles}>Zip</label>
-                                                        <input type="text" id={`res-zip-${index}`} className={inputStyles} value={res.zip} onChange={(e) => handleResidenceChange(index, e)} required />
+                                                        <input suppressHydrationWarning type="text" id={`res-zip-${index}`} className={inputStyles} value={res.zip} onChange={(e) => handleResidenceChange(index, e)} required />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
                                                 <div>
                                                     <label className={labelStyles}>Years</label>
-                                                    <input type="number" id={`res-years-${index}`} className={inputStyles} value={res.years} onChange={(e) => handleResidenceChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="number" id={`res-years-${index}`} className={inputStyles} value={res.years} onChange={(e) => handleResidenceChange(index, e)} required />
                                                 </div>
                                                 <div>
                                                     <label className={labelStyles}>Months</label>
-                                                    <input type="number" id={`res-months-${index}`} className={inputStyles} value={res.months} onChange={(e) => handleResidenceChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="number" id={`res-months-${index}`} className={inputStyles} value={res.months} onChange={(e) => handleResidenceChange(index, e)} required />
                                                 </div>
                                                 <div>
                                                     <label className={labelStyles}>Residence Type</label>
-                                                    <select id={`res-type-${index}`} className={selectStyles} value={res.type} onChange={(e) => handleResidenceChange(index, e)} required>
+                                                    <select suppressHydrationWarning id={`res-type-${index}`} className={selectStyles} value={res.type} onChange={(e) => handleResidenceChange(index, e)} required>
                                                         <option value="">SELECT</option>
                                                         <option value="own">OWN</option>
                                                         <option value="rent">RENT</option>
@@ -687,12 +687,12 @@ const PreApproveForm = () => {
                                                 </div>
                                                 <div>
                                                     <label className={labelStyles}>Monthly Pmt</label>
-                                                    <input type="text" id={`res-amount-${index}`} className={inputStyles} placeholder="$0.00" value={res.amount} onChange={(e) => handleResidenceChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="text" id={`res-amount-${index}`} className={inputStyles} placeholder="$0.00" value={res.amount} onChange={(e) => handleResidenceChange(index, e)} required />
                                                 </div>
                                             </div>
                                         </div>
                                     ))}
-                                    <button type="button" onClick={addResidence} className="text-[10px] font-black uppercase tracking-widest text-[#ed1c24] flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
+                                    <button suppressHydrationWarning type="button" onClick={addResidence} className="text-[10px] font-black uppercase tracking-widest text-[#ed1c24] flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
                                         <Plus size={14} /> Add Another Address
                                     </button>
                                 </section>
@@ -703,47 +703,47 @@ const PreApproveForm = () => {
                                     {workHistory.map((work, index) => (
                                         <div key={index} className="p-6 bg-white/2 border border-white/5 mb-6 relative">
                                             {index > 0 && (
-                                                <button type="button" onClick={() => removeWork(index)} className="absolute top-4 right-4 text-white/30 hover:text-[#ed1c24] transition-colors cursor-pointer">
+                                                <button suppressHydrationWarning type="button" onClick={() => removeWork(index)} className="absolute top-4 right-4 text-white/30 hover:text-[#ed1c24] transition-colors cursor-pointer">
                                                     <Trash2 size={16} />
                                                 </button>
                                             )}
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                                 <div>
                                                     <label className={labelStyles}>Current Employer</label>
-                                                    <input type="text" id={`work-employer-${index}`} className={inputStyles} value={work.employer} onChange={(e) => handleWorkChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="text" id={`work-employer-${index}`} className={inputStyles} value={work.employer} onChange={(e) => handleWorkChange(index, e)} required />
                                                 </div>
                                                 <div>
                                                     <label className={labelStyles}>Job Title</label>
-                                                    <input type="text" id={`work-jobTitle-${index}`} className={inputStyles} value={work.jobTitle} onChange={(e) => handleWorkChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="text" id={`work-jobTitle-${index}`} className={inputStyles} value={work.jobTitle} onChange={(e) => handleWorkChange(index, e)} required />
                                                 </div>
                                                 <div>
                                                     <label className={labelStyles}>Gross Monthly Income</label>
-                                                    <input type="text" id={`work-monthlyIncome-${index}`} className={inputStyles} placeholder="$0,000" value={work.monthlyIncome} onChange={(e) => handleWorkChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="text" id={`work-monthlyIncome-${index}`} className={inputStyles} placeholder="$0,000" value={work.monthlyIncome} onChange={(e) => handleWorkChange(index, e)} required />
                                                 </div>
                                                 <div className="grid grid-cols-2 gap-4">
                                                     <div>
                                                         <label className={labelStyles}>Years</label>
-                                                        <input type="number" id={`work-years-${index}`} className={inputStyles} value={work.years} onChange={(e) => handleWorkChange(index, e)} required />
+                                                        <input suppressHydrationWarning type="number" id={`work-years-${index}`} className={inputStyles} value={work.years} onChange={(e) => handleWorkChange(index, e)} required />
                                                     </div>
                                                     <div>
                                                         <label className={labelStyles}>Months</label>
-                                                        <input type="number" id={`work-months-${index}`} className={inputStyles} value={work.months} onChange={(e) => handleWorkChange(index, e)} required />
+                                                        <input suppressHydrationWarning type="number" id={`work-months-${index}`} className={inputStyles} value={work.months} onChange={(e) => handleWorkChange(index, e)} required />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                 <div className="md:col-span-2">
                                                     <label className={labelStyles}>Employer Address</label>
-                                                    <input type="text" id={`work-address-${index}`} className={inputStyles} value={work.address} onChange={(e) => handleWorkChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="text" id={`work-address-${index}`} className={inputStyles} value={work.address} onChange={(e) => handleWorkChange(index, e)} required />
                                                 </div>
                                                 <div>
                                                     <label className={labelStyles}>Employer Phone</label>
-                                                    <input type="tel" id={`work-phone-${index}`} className={inputStyles} value={work.phone} onChange={(e) => handleWorkChange(index, e)} required />
+                                                    <input suppressHydrationWarning type="tel" id={`work-phone-${index}`} className={inputStyles} value={work.phone} onChange={(e) => handleWorkChange(index, e)} required />
                                                 </div>
                                             </div>
                                         </div>
                                     ))}
-                                    <button type="button" onClick={addWork} className="text-[10px] font-black uppercase tracking-widest text-[#ed1c24] flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
+                                    <button suppressHydrationWarning type="button" onClick={addWork} className="text-[10px] font-black uppercase tracking-widest text-[#ed1c24] flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
                                         <Plus size={14} /> Add Another Job
                                     </button>
                                 </section>
@@ -758,23 +758,23 @@ const PreApproveForm = () => {
                                             <label className={cn(labelStyles, businessErrors.legalName && "text-[#ed1c24]")} htmlFor="legalName">
                                                 Company Legal Name {businessErrors.legalName && <span className="ml-1">*</span>}
                                             </label>
-                                            <input type="text" id="legalName" className={cn(inputStyles, businessErrors.legalName && "border-[#ed1c24]/50")} value={businessInfo.legalName} onChange={handleBusinessInfoChange} required />
+                                            <input suppressHydrationWarning type="text" id="legalName" className={cn(inputStyles, businessErrors.legalName && "border-[#ed1c24]/50")} value={businessInfo.legalName} onChange={handleBusinessInfoChange} required />
                                         </div>
                                         <div>
                                             <label className={cn(labelStyles, businessErrors.taxId && "text-[#ed1c24]")} htmlFor="taxId">
                                                 Tax ID (EIN) {businessErrors.taxId && <span className="ml-1">(INVALID)</span>}
                                             </label>
-                                            <input type="text" id="taxId" className={cn(inputStyles, businessErrors.taxId && "border-[#ed1c24]/50")} value={businessInfo.taxId} onChange={handleBusinessInfoChange} required />
+                                            <input suppressHydrationWarning type="text" id="taxId" className={cn(inputStyles, businessErrors.taxId && "border-[#ed1c24]/50")} value={businessInfo.taxId} onChange={handleBusinessInfoChange} required />
                                         </div>
                                         <div>
                                             <label className={labelStyles} htmlFor="dba">Company Name (DBA)</label>
-                                            <input type="text" id="dba" className={inputStyles} value={businessInfo.dba} onChange={handleBusinessInfoChange} />
+                                            <input suppressHydrationWarning type="text" id="dba" className={inputStyles} value={businessInfo.dba} onChange={handleBusinessInfoChange} />
                                         </div>
                                         <div>
                                             <label className={cn(labelStyles, businessErrors.yearsInBusiness && "text-[#ed1c24]")} htmlFor="yearsInBusiness">
                                                 Years In Business {businessErrors.yearsInBusiness && <span className="ml-1">*</span>}
                                             </label>
-                                            <input type="number" id="yearsInBusiness" className={cn(inputStyles, businessErrors.yearsInBusiness && "border-[#ed1c24]/50")} value={businessInfo.yearsInBusiness} onChange={handleBusinessInfoChange} required />
+                                            <input suppressHydrationWarning type="number" id="yearsInBusiness" className={cn(inputStyles, businessErrors.yearsInBusiness && "border-[#ed1c24]/50")} value={businessInfo.yearsInBusiness} onChange={handleBusinessInfoChange} required />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -782,13 +782,13 @@ const PreApproveForm = () => {
                                             <label className={cn(labelStyles, businessErrors.phone && "text-[#ed1c24]")} htmlFor="biz-phone">
                                                 Business Phone {businessErrors.phone && <span className="ml-1">(10 DIGITS)</span>}
                                             </label>
-                                            <input type="tel" id="biz-phone" className={cn(inputStyles, businessErrors.phone && "border-[#ed1c24]/50")} value={businessInfo.phone} onChange={handleBusinessInfoChange} required />
+                                            <input suppressHydrationWarning type="tel" id="biz-phone" className={cn(inputStyles, businessErrors.phone && "border-[#ed1c24]/50")} value={businessInfo.phone} onChange={handleBusinessInfoChange} required />
                                         </div>
                                         <div>
                                             <label className={cn(labelStyles, businessErrors.email && "text-[#ed1c24]")} htmlFor="biz-email">
                                                 Business Email {businessErrors.email && <span className="ml-1">(INVALID)</span>}
                                             </label>
-                                            <input type="email" id="biz-email" className={cn(inputStyles, businessErrors.email && "border-[#ed1c24]/50")} value={businessInfo.email} onChange={handleBusinessInfoChange} required />
+                                            <input suppressHydrationWarning type="email" id="biz-email" className={cn(inputStyles, businessErrors.email && "border-[#ed1c24]/50")} value={businessInfo.email} onChange={handleBusinessInfoChange} required />
                                         </div>
                                     </div>
                                 </section>
@@ -801,26 +801,26 @@ const PreApproveForm = () => {
                                             <label className={cn(labelStyles, businessErrors.street && "text-[#ed1c24]")} htmlFor="street">
                                                 Street Address {businessErrors.street && <span className="ml-1">*</span>}
                                             </label>
-                                            <input type="text" id="street" className={cn(inputStyles, businessErrors.street && "border-[#ed1c24]/50")} value={businessAddress.street} onChange={handleBusinessAddressChange} required />
+                                            <input suppressHydrationWarning type="text" id="street" className={cn(inputStyles, businessErrors.street && "border-[#ed1c24]/50")} value={businessAddress.street} onChange={handleBusinessAddressChange} required />
                                         </div>
                                         <div>
                                             <label className={cn(labelStyles, businessErrors.city && "text-[#ed1c24]")} htmlFor="city">
                                                 City {businessErrors.city && <span className="ml-1">*</span>}
                                             </label>
-                                            <input type="text" id="city" className={cn(inputStyles, businessErrors.city && "border-[#ed1c24]/50")} value={businessAddress.city} onChange={handleBusinessAddressChange} required />
+                                            <input suppressHydrationWarning type="text" id="city" className={cn(inputStyles, businessErrors.city && "border-[#ed1c24]/50")} value={businessAddress.city} onChange={handleBusinessAddressChange} required />
                                         </div>
                                         <div className="grid grid-cols-2 gap-4">
                                             <div>
                                                 <label className={cn(labelStyles, businessErrors.state && "text-[#ed1c24]")} htmlFor="state">
                                                     State {businessErrors.state && <span className="ml-1">*</span>}
                                                 </label>
-                                                <input type="text" id="state" className={cn(inputStyles, businessErrors.state && "border-[#ed1c24]/50")} value={businessAddress.state} onChange={handleBusinessAddressChange} required />
+                                                <input suppressHydrationWarning type="text" id="state" className={cn(inputStyles, businessErrors.state && "border-[#ed1c24]/50")} value={businessAddress.state} onChange={handleBusinessAddressChange} required />
                                             </div>
                                             <div>
                                                 <label className={cn(labelStyles, businessErrors.zip && "text-[#ed1c24]")} htmlFor="zip">
                                                     Zip {businessErrors.zip && <span className="ml-1">*</span>}
                                                 </label>
-                                                <input type="text" id="zip" className={cn(inputStyles, businessErrors.zip && "border-[#ed1c24]/50")} value={businessAddress.zip} onChange={handleBusinessAddressChange} required />
+                                                <input suppressHydrationWarning type="text" id="zip" className={cn(inputStyles, businessErrors.zip && "border-[#ed1c24]/50")} value={businessAddress.zip} onChange={handleBusinessAddressChange} required />
                                             </div>
                                         </div>
                                     </div>
@@ -834,13 +834,13 @@ const PreApproveForm = () => {
                                             <label className={cn(labelStyles, businessErrors.grossProfit && "text-[#ed1c24]")} htmlFor="grossProfit">
                                                 Gross Profit (Monthly) {businessErrors.grossProfit && <span className="ml-1">*</span>}
                                             </label>
-                                            <input type="text" id="grossProfit" className={cn(inputStyles, businessErrors.grossProfit && "border-[#ed1c24]/50")} placeholder="$0,000" value={businessIncome.grossProfit} onChange={handleBusinessIncomeChange} required />
+                                            <input suppressHydrationWarning type="text" id="grossProfit" className={cn(inputStyles, businessErrors.grossProfit && "border-[#ed1c24]/50")} placeholder="$0,000" value={businessIncome.grossProfit} onChange={handleBusinessIncomeChange} required />
                                         </div>
                                         <div>
                                             <label className={cn(labelStyles, businessErrors.annualSales && "text-[#ed1c24]")} htmlFor="annualSales">
                                                 Annual Sales {businessErrors.annualSales && <span className="ml-1">*</span>}
                                             </label>
-                                            <input type="text" id="annualSales" className={cn(inputStyles, businessErrors.annualSales && "border-[#ed1c24]/50")} placeholder="$0,000,000" value={businessIncome.annualSales} onChange={handleBusinessIncomeChange} required />
+                                            <input suppressHydrationWarning type="text" id="annualSales" className={cn(inputStyles, businessErrors.annualSales && "border-[#ed1c24]/50")} placeholder="$0,000,000" value={businessIncome.annualSales} onChange={handleBusinessIncomeChange} required />
                                         </div>
                                     </div>
                                 </section>
@@ -859,7 +859,7 @@ const PreApproveForm = () => {
                                 <label className={cn(labelStyles, signatureError && "text-[#ed1c24]")} htmlFor="signature">
                                     Type Full Name to Sign {signatureError && <span className="ml-1">*</span>}
                                 </label>
-                                <input 
+                                <input suppressHydrationWarning 
                                     type="text" id="signature" className={cn(inputStyles, "font-serif italic text-2xl", signatureError && "border-[#ed1c24]/50")} 
                                     placeholder="John Doe" value={signature} onChange={(e) => {
                                         setSignature(e.target.value);

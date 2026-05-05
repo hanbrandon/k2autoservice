@@ -4,11 +4,11 @@ import Footer from '@/components/layout/Footer';
 import PreApproveForm from '@/components/pre-approve/PreApproveForm';
 
 export const metadata: Metadata = {
-    title: 'Pre-Approval Application',
-    description: 'Get pre-approved for your next vehicle purchase at K2 Auto Group. Secure and fast online application.',
+    title: 'Credit Application',
+    description: 'Apply for credit for your next vehicle purchase at K2 Auto Group. Secure and fast online application.',
 };
 
-export default function PreApprovePage() {
+export default function CreditApplicationPage() {
     return (
         <div className="bg-[#0a0a0a] min-h-screen text-white">
             <Navbar />

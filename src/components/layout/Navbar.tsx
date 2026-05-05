@@ -42,9 +42,7 @@ const Navbar = () => {
                     ? 'Sales'
                     : pathname === '/rental'
                       ? 'Rental'
-                      : pathname === '/pre-approve'
-                        ? 'Pre-Approve'
-                        : '';
+                      : '';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -171,6 +169,13 @@ const Navbar = () => {
                                     {item.name.toUpperCase()}
                                 </a>
                             ))}
+                            <Link
+                                href="/credit-application"
+                                onClick={() => setIsMenuOpen(false)}
+                                className="transition-all cursor-pointer hover:pl-4 text-black"
+                            >
+                                CREDIT APPLICATION
+                            </Link>
                             <div className="mt-12 flex flex-col gap-4">
                                 <Link
                                     href="/quote"

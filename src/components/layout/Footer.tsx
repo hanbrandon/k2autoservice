@@ -44,7 +44,7 @@ const Footer = () => {
                             <Link href="/rental" className="hover:text-[#ed1c24] transition-colors">RENTAL</Link>
                             <Link href="/dmv" className="hover:text-[#ed1c24] transition-colors">DMV</Link>
                             <Link href="/faq" className="hover:text-[#ed1c24] transition-colors">FAQ</Link>
-                            <Link href="/pre-approve" className="hover:text-[#ed1c24] transition-colors">PRE-APPROVE</Link>
+                            <Link href="/credit-application" className="hover:text-[#ed1c24] transition-colors">CREDIT APPLICATION</Link>
                         </div>
                     </div>
 
