@@ -223,6 +223,7 @@ const ContactSection = () => {
                         <div className="grid grid-cols-3 md:grid-cols-5 gap-0 mb-16 bg-black/5 border border-black/5">
                             {forms.map((form) => (
                                 <button
+                                    suppressHydrationWarning
                                     key={form.id}
                                     onClick={() =>
                                         setActiveForm(form.id as FormType)
@@ -283,6 +284,7 @@ const ContactSection = () => {
                                                 Full Name
                                             </label>
                                             <input
+                                                suppressHydrationWarning
                                                 type="text"
                                                 id="name"
                                                 name="name"
@@ -301,6 +303,7 @@ const ContactSection = () => {
                                                 Email Address
                                             </label>
                                             <input
+                                                suppressHydrationWarning
                                                 type="email"
                                                 id="email"
                                                 name="email"
@@ -327,6 +330,7 @@ const ContactSection = () => {
                                                 )}
                                             </label>
                                             <input
+                                                suppressHydrationWarning
                                                 type="tel"
                                                 id="phone"
                                                 name="phone"
@@ -352,6 +356,7 @@ const ContactSection = () => {
                                             </label>
                                             <div className="relative">
                                                 <select
+                                                    suppressHydrationWarning
                                                     id="method"
                                                     name="method"
                                                     className={selectStyles}
@@ -416,6 +421,7 @@ const ContactSection = () => {
                                                     </label>
                                                     <div className="relative">
                                                         <select
+                                                            suppressHydrationWarning
                                                             id="dmv_type"
                                                             name="dmv_type"
                                                             className={
@@ -453,6 +459,7 @@ const ContactSection = () => {
                                                         VIN (17 Digits)
                                                     </label>
                                                     <input
+                                                        suppressHydrationWarning
                                                         type="text"
                                                         id="vin_dmv"
                                                         name="vin"
@@ -481,6 +488,7 @@ const ContactSection = () => {
                                                     Make
                                                 </label>
                                                 <input
+                                                    suppressHydrationWarning
                                                     type="text"
                                                     id="make"
                                                     name="make"
@@ -499,6 +507,7 @@ const ContactSection = () => {
                                                     Model
                                                 </label>
                                                 <input
+                                                    suppressHydrationWarning
                                                     type="text"
                                                     id="model"
                                                     name="model"
@@ -518,6 +527,7 @@ const ContactSection = () => {
                                                 </label>
                                                 <div className="relative">
                                                     <select
+                                                        suppressHydrationWarning
                                                         id="purchase_type"
                                                         name="purchase_type"
                                                         className={selectStyles}
@@ -558,6 +568,7 @@ const ContactSection = () => {
                                                 </label>
                                                 <div className="relative">
                                                     <select
+                                                        suppressHydrationWarning
                                                         id="repair_type"
                                                         name="repair_type"
                                                         className={selectStyles}
@@ -591,6 +602,7 @@ const ContactSection = () => {
                                                     Vehicle Year/Model
                                                 </label>
                                                 <input
+                                                    suppressHydrationWarning
                                                     type="text"
                                                     id="vin_repair"
                                                     name="vehicle"
@@ -925,6 +937,7 @@ const ContactSection = () => {
                                         )}
 
                                         <button
+                                            suppressHydrationWarning
                                             type="submit"
                                             disabled={isSending}
                                             className="w-full bg-white text-black py-6 font-black tracking-[0.4em] uppercase text-[10px] hover:bg-[#ed1c24] hover:text-white transition-all disabled:opacity-20 flex items-center justify-center gap-3"

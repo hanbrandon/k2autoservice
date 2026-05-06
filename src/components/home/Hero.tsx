@@ -108,6 +108,7 @@ const Hero = () => {
                     <div className="flex flex-col sm:flex-row gap-8">
                         <div className="flex flex-col sm:flex-row gap-10">
                             <motion.button
+                                suppressHydrationWarning
                                 onClick={() =>
                                     (window.location.href = '/sales')
                                 }
@@ -120,6 +121,7 @@ const Hero = () => {
                                 Shop All Cars
                             </motion.button>
                             <motion.button
+                                suppressHydrationWarning
                                 onClick={() =>
                                     (window.location.href = '/repair')
                                 }

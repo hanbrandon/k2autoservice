@@ -69,6 +69,7 @@ const Location = () => {
                                 className="border-b border-white/20 pb-2 flex justify-between items-center group/input"
                             >
                                 <input
+                                    suppressHydrationWarning
                                     type="text"
                                     value={userLoc}
                                     onChange={(e) => setUserLoc(e.target.value)}
@@ -77,6 +78,7 @@ const Location = () => {
                                     className="bg-transparent text-xs uppercase placeholder:text-white/40 outline-none w-full font-bold tracking-wider py-2"
                                 />
                                 <button
+                                    suppressHydrationWarning
                                     type="submit"
                                     className="hover:text-[#ed1c24] transition-colors p-2"
                                     aria-label="Get directions"
@@ -128,6 +130,7 @@ const Location = () => {
                                 className="border-b border-white/20 pb-2 flex justify-between items-center group/input"
                             >
                                 <input
+                                    suppressHydrationWarning
                                     type="text"
                                     value={userLoc}
                                     onChange={(e) => setUserLoc(e.target.value)}
@@ -135,6 +138,7 @@ const Location = () => {
                                     className="bg-transparent text-xs uppercase placeholder:text-white/60 outline-none w-full font-bold tracking-wider"
                                 />
                                 <button
+                                    suppressHydrationWarning
                                     type="submit"
                                     className="hover:text-[#ed1c24] transition-colors cursor-pointer p-3"
                                     aria-label="Get directions"

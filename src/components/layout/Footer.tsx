@@ -141,6 +141,7 @@ const Footer = () => {
 
                 {/* Back to Top - Sleek Fixed Square */}
                 <button
+                    suppressHydrationWarning
                     onClick={scrollToTop}
                     aria-label="Scroll back to top"
                     className="fixed bottom-10 right-10 bg-[#ed1c24] text-white w-14 h-14 rounded-none z-50 hover:bg-black transition-all shadow-2xl group lg:flex hidden items-center justify-center overflow-hidden"

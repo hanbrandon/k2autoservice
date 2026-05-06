@@ -199,6 +199,7 @@ const Experience = () => {
                                                     {floorData[f.id].title}
                                                 </motion.h3>
                                                 <button
+                                                    suppressHydrationWarning
                                                     onClick={() =>
                                                         router.push(f.path)
                                                     }
