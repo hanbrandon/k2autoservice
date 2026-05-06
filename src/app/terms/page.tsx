@@ -1,10 +1,21 @@
-'use client';
-
-import { motion } from 'motion/react';
 import { FileText } from 'lucide-react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { BUSINESS_INFO } from '@/utils/businessInfo';
+
+export const metadata: Metadata = {
+    title: 'Terms of Use',
+    description:
+        'Read the terms governing K2 Auto Group automotive repair, vehicle sales, rentals, DMV services, estimates, payments, and website use.',
+    alternates: {
+        canonical: 'https://k2motorgroup.com/terms',
+    },
+    robots: {
+        index: false,
+        follow: true,
+    },
+};
 
 const TermsOfUse = () => {
     return (
@@ -13,16 +24,12 @@ const TermsOfUse = () => {
             <main className="pt-40 pb-32 px-10 min-h-screen">
                 <div className="max-w-[1000px] mx-auto">
                     <header className="mb-24">
-                        <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className="flex items-center gap-4 text-[#ed1c24] mb-8"
-                        >
+                        <div className="flex items-center gap-4 text-[#ed1c24] mb-8">
                             <FileText size={14} />
                             <span className="text-[10px] font-black tracking-[0.5em] uppercase italic">
                                 Service Agreement
                             </span>
-                        </motion.div>
+                        </div>
                         <h1 className="text-condensed text-5xl md:text-8xl font-black italic leading-[0.9] uppercase">
                             Terms Of
                             <br />

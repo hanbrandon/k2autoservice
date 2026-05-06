@@ -2,6 +2,8 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import DMVContent from '@/components/dmv/DMVContent';
 import { Metadata } from 'next';
+import PageSchema from '@/components/seo/PageSchema';
+import { serviceSchema } from '@/utils/schema';
 
 export const metadata: Metadata = {
     title: 'Expedited DMV Registration & Title Services',
@@ -22,6 +24,15 @@ export const metadata: Metadata = {
 export default function DMVPage() {
     return (
         <div className="selection:bg-[#ed1c24] selection:text-white">
+            <PageSchema
+                schema={serviceSchema({
+                    name: 'Expedited DMV Registration and Title Services',
+                    description:
+                        'Vehicle registration, title transfers, lien services, and out-of-state registration support in Garden Grove, California.',
+                    url: 'https://k2motorgroup.com/dmv',
+                    serviceType: 'Vehicle registration and title services',
+                })}
+            />
             <Navbar />
             <main>
                 <DMVContent />

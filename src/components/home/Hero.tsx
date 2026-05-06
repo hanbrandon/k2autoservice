@@ -184,9 +184,12 @@ const Hero = () => {
                         }}
                         className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none"
                     >
-                        <h1 className="text-condensed text-[9vw] leading-none font-black text-white whitespace-nowrap ">
+                        <div
+                            aria-hidden="true"
+                            className="text-condensed text-[9vw] leading-none font-black text-white whitespace-nowrap "
+                        >
                             K2 AUTO GROUP
-                        </h1>
+                        </div>
                     </motion.div>
                 </motion.div>
 

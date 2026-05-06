@@ -6,6 +6,9 @@ import PreApproveForm from '@/components/pre-approve/PreApproveForm';
 export const metadata: Metadata = {
     title: 'Credit Application',
     description: 'Apply for credit for your next vehicle purchase at K2 Auto Group. Secure and fast online application.',
+    alternates: {
+        canonical: 'https://k2motorgroup.com/credit-application',
+    },
 };
 
 export default function CreditApplicationPage() {

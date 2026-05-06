@@ -7,7 +7,7 @@ const JSONLD = () => {
         '@type': 'AutoRepair',
         name: 'K2 Auto Group',
         image: `${BUSINESS_INFO.siteUrl}/og-image.png`, 
-        '@id': BUSINESS_INFO.siteUrl,
+        '@id': `${BUSINESS_INFO.siteUrl}/#business`,
         url: BUSINESS_INFO.siteUrl,
         telephone: `+1-${BUSINESS_INFO.phoneRaw.slice(0, 3)}-${BUSINESS_INFO.phoneRaw.slice(3, 6)}-${BUSINESS_INFO.phoneRaw.slice(6)}`,
         address: {
@@ -79,10 +79,26 @@ const JSONLD = () => {
         },
     };
 
+    const websiteSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': `${BUSINESS_INFO.siteUrl}/#website`,
+        name: 'K2 Auto Group',
+        url: BUSINESS_INFO.siteUrl,
+        publisher: {
+            '@id': `${BUSINESS_INFO.siteUrl}/#business`,
+        },
+    };
+
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@graph': [businessSchema, websiteSchema],
+                }),
+            }}
         />
     );
 };

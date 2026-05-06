@@ -1,10 +1,21 @@
-'use client';
-
-import { motion } from 'motion/react';
 import { ShieldCheck } from 'lucide-react';
+import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { BUSINESS_INFO } from '@/utils/businessInfo';
+
+export const metadata: Metadata = {
+    title: 'Privacy Policy',
+    description:
+        'Review how K2 Auto Group collects, uses, and protects customer information for automotive repair, sales, rentals, and DMV services.',
+    alternates: {
+        canonical: 'https://k2motorgroup.com/privacy',
+    },
+    robots: {
+        index: false,
+        follow: true,
+    },
+};
 
 const PrivacyPolicy = () => {
     return (
@@ -13,16 +24,12 @@ const PrivacyPolicy = () => {
             <main className="pt-40 pb-32 px-10 min-h-screen">
                 <div className="max-w-[1000px] mx-auto">
                     <header className="mb-24">
-                        <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className="flex items-center gap-4 text-[#ed1c24] mb-8"
-                        >
+                        <div className="flex items-center gap-4 text-[#ed1c24] mb-8">
                             <ShieldCheck size={14} />
                             <span className="text-[10px] font-black tracking-[0.5em] uppercase italic">
                                 Legal Protection
                             </span>
-                        </motion.div>
+                        </div>
                         <h1 className="text-condensed text-5xl md:text-8xl font-black italic leading-[0.9] uppercase">
                             Privacy
                             <br />
