@@ -187,7 +187,7 @@ const QuoteContent = () => {
                                     </div>
                                     <div className="group relative">
                                         <label htmlFor="email" className={labelStyles}>Email Address</label>
-                                        <input type="email" id="email" name="email" required className={inputStyles} placeholder="HELLO@K2GROUP.US" />
+                                        <input type="email" id="email" name="email" required className={inputStyles} placeholder="EXAMPLE@EMAIL.COM" />
                                         <div className="absolute bottom-0 left-0 right-0 h-px bg-black/10" />
                                         <div className="absolute bottom-0 left-0 h-0.5 bg-[#ed1c24] w-0 group-focus-within:w-full transition-all duration-500 z-20" />
                                     </div>

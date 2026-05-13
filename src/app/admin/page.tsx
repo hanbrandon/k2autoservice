@@ -349,7 +349,7 @@ export default function AdminPage() {
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                     {[
                                         { id: 'name', label: 'Full Name', placeholder: 'JOHN DOE' },
-                                        { id: 'email', label: 'Email', placeholder: 'HELLO@K2GROUP.US' },
+                                        { id: 'email', label: 'Email', placeholder: 'EXAMPLE@EMAIL.COM' },
                                         { id: 'phone', label: 'Phone', placeholder: '(000) 000-0000' },
                                     ].map((f) => (
                                         <div key={f.id} className="space-y-3">

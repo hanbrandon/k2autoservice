@@ -309,7 +309,7 @@ const ContactSection = () => {
                                                 name="email"
                                                 required
                                                 className={inputStyles}
-                                                placeholder="HELLO@K2GROUP.US"
+                                                placeholder="EXAMPLE@EMAIL.COM"
                                             />
                                             <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
                                             <div className="absolute bottom-0 left-0 h-0.5 bg-[#ed1c24] w-0 group-focus-within:w-full transition-all duration-500 z-20" />
