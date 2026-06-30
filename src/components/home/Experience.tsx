@@ -10,11 +10,36 @@ import {
 } from 'motion/react';
 
 const floors = [
-    { id: 'REPAIR', name: 'Professional Repair', path: '/repair' },
-    { id: 'NEW', name: 'New Car Purchase & Lease', path: '/sales' },
-    { id: 'USED', name: 'Certified Pre-Owned', path: '/sales' },
-    { id: 'RENTAL', name: 'Short & Long-term Rental', path: '/rental' },
-    { id: 'DMV', name: 'DMV & Registration', path: '/dmv' },
+    {
+        id: 'REPAIR',
+        name: 'Professional Repair',
+        path: '/repair',
+        image: '/services/repair.png',
+    },
+    {
+        id: 'NEW',
+        name: 'New Car Purchase & Lease',
+        path: '/sales',
+        image: '/services/new-car-sales.png',
+    },
+    {
+        id: 'USED',
+        name: 'Certified Pre-Owned',
+        path: '/sales',
+        image: '/services/certified-pre-owned.png',
+    },
+    {
+        id: 'RENTAL',
+        name: 'Short & Long-term Rental',
+        path: '/rental',
+        image: '/services/rental.png',
+    },
+    {
+        id: 'DMV',
+        name: 'DMV & Registration',
+        path: '/dmv',
+        image: '/services/dmv.png',
+    },
 ];
 
 const floorData: Record<
@@ -170,7 +195,7 @@ const Experience = () => {
                                                             : 1.1,
                                                 }}
                                                 transition={{ duration: 0.8 }}
-                                                src={`https://picsum.photos/seed/k2-${f.id.toLowerCase()}/1200/675`}
+                                                src={f.image}
                                                 alt={floorData[f.id].title}
                                                 className="w-full h-full object-cover"
                                                 referrerPolicy="no-referrer"
